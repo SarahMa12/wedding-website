@@ -1,45 +1,41 @@
-# Dependencies - don't commit the massive node_modules folder
-node_modules/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Logs - temporary files
-*.log
-npm-debug.log*
-yarn-debug.log*
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# Environment variables - keep API keys secret
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Build outputs - these get recreated
-build/
-dist/
-
-# OS generated files - system junk
-.DS_Store
-.DS_Store?
-._*
-Thumbs.db
-ehthumbs.db
-desktop.ini
-
-# IDE settings - everyone's setup is different
-.vscode/settings.json
-.idea/
-*.swp
-*.swo
-*~
-
-# Development tools
-.eslintcache
-.coverage
-.nyc_output
-
-# React testing files
+# testing
 /coverage
 
-# Temporary files
-tmp/
-temp/
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
