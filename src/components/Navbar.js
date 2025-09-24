@@ -1,10 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from 'next/link';
 import Image from 'next/image'
 import styles from "@/styles/Navbar.module.css";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+        if(window.innerWidth > 776 && menuOpen) {
+            setMenuOpen(false);
+        }
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [menuOpen]);
     return (
         <>
             <nav className={styles.navBar}>
@@ -23,12 +34,11 @@ export default function Navbar() {
                 <ul className={styles.navLinks}>
                     <li><Link href="/">Home</Link></li>
                     <li><Link href="/rsvp">RSVP</Link></li>
-                    <li><Link href="/">Wedding Details</Link></li>
-                    <li><Link href="/">Wedding Attire</Link></li>
-                    <li><Link href="/">Travel</Link></li>
-                    <li><Link href="/">Activities</Link></li>
-                    <li><Link href="/">Activities</Link></li>
-                    <li><Link href="/">Registry</Link></li>
+                    <li><Link href="/wedding-details">Wedding Details</Link></li>
+                    <li><Link href="/wedding-attire">Wedding Attire</Link></li>
+                    <li><Link href="/travel">Travel</Link></li>
+                    <li><Link href="/activities">Activities</Link></li>
+                    <li><Link href="/registry">Registry</Link></li>
                 </ul>
 
                 {menuOpen && (
@@ -38,9 +48,7 @@ export default function Navbar() {
                             <li><Link href="/rsvp" onClick={() => setMenuOpen(false)}>RSVP</Link></li>
                             <li><Link href="/" onClick={() => setMenuOpen(false)}>Wedding Details</Link></li>
                             <li><Link href="/" onClick={() => setMenuOpen(false)}>Wedding Attire</Link></li>
-                            <li><Link href="/" onClick={() => setMenuOpen(false)}>Travel</Link></li>
-                            <li><Link href="/" onClick={() => setMenuOpen(false)}>Activities</Link></li>
-                            <li><Link href="/" onClick={() => setMenuOpen(false)}>Activities</Link></li>
+                            <li><Link href="/" onClick={() => setMenuOpen(false)}>Travel</Link></li>                            <li><Link href="/" onClick={() => setMenuOpen(false)}>Activities</Link></li>
                             <li><Link href="/" onClick={() => setMenuOpen(false)}>Registry</Link></li>
                         </ul>
                         <button className={styles.closeButton} onClick={() => setMenuOpen(false)}>
