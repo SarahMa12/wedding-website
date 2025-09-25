@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'Malibu Ring';
+    src: url('/fonts/malibu-ring.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .navBar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem 2rem;
+    padding: 1rem 2rem 0.5rem;
     gap: 3rem;
 }
 
@@ -19,8 +26,9 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     white-space: nowrap;
+    font-family: 'Malibu Ring', cursive;
 }
 
 .navButton {
@@ -53,6 +61,10 @@
 
     .navButton {
         display: block;
+    }
+
+    .logo, .navButton {
+        margin-bottom: 1rem;
     }
 }
 

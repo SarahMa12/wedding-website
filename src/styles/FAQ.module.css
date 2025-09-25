@@ -1,0 +1,13 @@
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.question {
+    font-size: 1.3rem;
+}
+
+.answer {
+    font-size: 1rem;
+}

@@ -23,11 +23,8 @@ export default function Navbar() {
                 <div className={styles.topNav}>
                     <div className={styles.logo}>Syrena and George</div>
 
-                    <button 
-                        className={styles.navButton}
-                        onClick={() => setMenuOpen(!menuOpen)}
-                    >
-                        <Image src="/nav-icon.svg" width="25" height="25"/>
+                    <button className={styles.navButton} onClick={() => setMenuOpen(true)}>
+                        <Image src="/images/nav-icon.svg" width="25" height="25"/>
                     </button>
                 </div>
            
@@ -53,7 +50,7 @@ export default function Navbar() {
                             <li><Link href="/registry" onClick={() => setMenuOpen(false)}>Registry</Link></li>
                         </ul>
                         <button className={styles.closeButton} onClick={() => setMenuOpen(false)}>
-                            <Image src="/close-icon.svg" width="25" height="25"/>
+                            <Image src="/images/close-icon.svg" width="25" height="25"/>
                         </button>
                     </div>
                 )}

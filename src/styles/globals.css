@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 /* CSS RESET */
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -59,4 +60,5 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   padding: 2rem 0;
+  font-family: 'Josefin Sans', sans-serif;
 }
