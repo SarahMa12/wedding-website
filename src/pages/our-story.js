@@ -1,5 +1,7 @@
 export default function OurStory() {
     return (
-        <div>This is the our story page</div>
+        <div class="body-container">
+            <div class="title">Our Story</div>
+        </div>
     );
 }

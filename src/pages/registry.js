@@ -1,5 +1,7 @@
 export default function Registry() {
     return (
-        <div>This is the registry page</div>
+        <div class="body-container">
+            <div class="title">Registry</div>
+        </div>
     );
 }
