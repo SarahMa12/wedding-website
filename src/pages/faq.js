@@ -19,7 +19,7 @@ export default function FAQ() {
                 </div>
                 <div className={styles.card}>
                     <div className={styles.question}>What if I did not RSVP but will attend the wedding?</div>
-                    <div className={styles.answer}>No RSVP = No Seat. We will assign your seats so we strongly suggest you do the RSVP on or before August 1, 2026 or you may contact and inform us ahead of time. In any case that you may have said Yes in our RSVP and suddenly won't be able to attend, please let us know ASAP so we can accomodate any changes.</div>
+                    <div className={styles.answer}>No RSVP = No Seat. We will assign your seats so we strongly suggest you do the RSVP on or before <b>August 1, 2026</b> or you may contact and inform us ahead of time. In any case that you may have said Yes in our RSVP and suddenly won't be able to attend, please let us know ASAP so we can accomodate any changes.</div>
                 </div>
                 <div className={styles.card}>
                     <div className={styles.question}>When should we arrive at the venue?</div>
