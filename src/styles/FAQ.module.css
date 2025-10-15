@@ -4,10 +4,20 @@
     gap: 1rem;
 }
 
+.card {
+    border: 1px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 .question {
+    background-color: lightgray;
     font-size: 1.3rem;
+    padding: 0.7rem;
 }
 
 .answer {
     font-size: 1rem;
+    padding: 0.7rem;
+    background-color: #f9f9f9;
 }
