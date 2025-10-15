@@ -1,23 +1,38 @@
 import styles from "@/styles/RSVP.module.css";
 
 export default function RSVP() {
-        const handleSubmit = (e) => {
+        const handleSubmit = async (e) => {
         e.preventDefault();
 
         const formData = new FormData(e.target);
 
         const data = {
-        mealPref: formData.get("meal-pref"),
-        address: formData.get("address"),
-        allergies: formData.get("allergies"),
-        transportation: formData.get("transportation"),
-        children: formData.get("children"),
-        yourName: formData.get("yourName"),
-        guestName: formData.get("guestName"),
+            mealPref: formData.get("meal-pref"),
+            changedAddress: formData.get("address"),
+            allergies: formData.get("allergies"),
+            transportation: formData.get("transportation"),
+            childCare: formData.get("children"),
+            yourName: formData.get("yourName"),
+            guestName: formData.get("guestName"),
         };
 
-        console.log("Form submitted:", data);
-        alert(JSON.stringify(data, null, 2));
+        try {
+            const res = await fetch("/api/rsvp", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+
+            if (res.ok) {
+                alert("RSVP submitted successfully! Thank you ❤️");
+                e.target.reset();
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        } catch (err) {
+            console.error("Error submitting RSVP:", err);
+            alert("Something went wrong. Please try again.");
+        }
     };
 
     return (
@@ -66,10 +81,10 @@ export default function RSVP() {
 
                 <div className={styles.formGroup}>
                     <label htmlFor="yourName">Your Name:</label>
-                    <input type="text" id="yourName" name="yourName" placeholder="Enter your name" required />
+                    <input type="text" id="yourName" name="yourName" placeholder="Enter your full name" required />
 
                     <label htmlFor="guestName">Guest Name:</label>
-                    <input type="text" id="guestName" name="guestName" placeholder="Enter guest name" />
+                    <input type="text" id="guestName" name="guestName" placeholder="Enter guest full name" />
                 </div>
 
                 <button type="submit">Submit</button>
