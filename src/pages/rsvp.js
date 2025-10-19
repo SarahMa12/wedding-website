@@ -129,7 +129,7 @@ export default function RSVP() {
                         <div className={styles.formGroup}>
                             <div className={styles.sectionHeader}>Housekeeping</div>
                             <div className={styles.formQuestion}>
-                                <label htmlFor="address">Please let us know if your address changed.</label>
+                                <label htmlFor="address">Please let us know if your home address changed.</label>
                                 <input type="text" id="address" name="address" placeholder="Enter your current address" />
                             </div>
                         </div>
