@@ -51,25 +51,25 @@ export default function FAQ() {
     };
 
     return (
-    <div className="body-container">
-        <div className="title">FAQ</div>
-        <div className={styles.faq}>
-        {faqs.map((faq, index) => (
-            <div className={styles.card} key={index}>
-                <div
-                    className={styles.question}
-                    onClick={() => toggleFAQ(index)}
-                    style={{ cursor: "pointer" }}
-                >
-                    {faq.question}
-                </div>
+        <div className="body-container">
+            <div className="title">FAQ</div>
+            <div className={styles.faq}>
+                {faqs.map((faq, index) => (
+                    <div className={styles.card} key={index}>
+                        <div
+                            className={styles.question}
+                            onClick={() => toggleFAQ(index)}
+                            style={{ cursor: "pointer" }}
+                        >
+                            {faq.question}
+                        </div>
 
-                {openIndexes.includes(index) && (
-                    <div className={styles.answer}>{faq.answer}</div>
-                )}
+                        {openIndexes.includes(index) && (
+                            <div className={styles.answer}>{faq.answer}</div>
+                        )}
+                    </div>
+                ))}
             </div>
-        ))}
         </div>
-    </div>
     );
 }
