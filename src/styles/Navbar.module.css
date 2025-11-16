@@ -34,40 +34,22 @@
 }
 
 .navButton {
-    display: none; 
     margin-left: auto;
     border: none;
     background-color: inherit;
 }
 
-.navLinks, .mobileNavlinks {
+.mobileNavlinks {
     list-style: none;
 }
 
-.navLinks {
-    display: flex;
-    gap: 2rem;
-    font-size: clamp(0.3rem, 1.8vw, 1.2rem);
-}
-
-.navLinks a, .mobileNavlinks a {
+.mobileNavlinks a {
     color: rgb(68, 68, 68);
     text-decoration: none;
 }
 
-/* Smaller screen */
-@media (max-width: 776px) {
-    .navLinks {
-        display: none;
-    }
-
-    .navButton {
-        display: block;
-    }
-
-    .logo, .navButton {
-        margin-bottom: 1rem;
-    }
+.topNav {
+    padding-bottom: 1rem;
 }
 
 /* Menu dropdown */

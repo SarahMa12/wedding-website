@@ -6,16 +6,7 @@ import styles from "@/styles/Navbar.module.css";
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    useEffect(() => {
-        const handleResize = () => {
-        if(window.innerWidth > 776 && menuOpen) {
-            setMenuOpen(false);
-        }
-        };
 
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, [menuOpen]);
     return (
         <>
             <nav className={styles.navBar}>
@@ -28,16 +19,6 @@ export default function Navbar() {
                     </button>
                 </div>
            
-                <ul className={styles.navLinks}>
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/rsvp">RSVP</Link></li>
-                    <li><Link href="/our-story">Our Story</Link></li>
-                    <li><Link href="/wedding-party">Wedding Party</Link></li>
-                    <li><Link href="/wedding-details">Wedding Details</Link></li>
-                    <li><Link href="/travel">Travel</Link></li>
-                    <li><Link href="/faq">FAQ</Link></li>
-                    <li><Link href="/registry">Registry</Link></li>
-                </ul>
 
                 {menuOpen && (
                     <div className={styles.mobileMenu}>
