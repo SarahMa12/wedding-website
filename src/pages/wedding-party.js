@@ -1,57 +1,46 @@
 import Image from "next/image";
 import styles from "@/styles/WeddingParty.module.css";
 
+// Example data for the wedding party
+const weddingParty = [
+  { name: "Caitlin", role: "Maid of Honor", image: "/images/caitlin.png", relationship: "Cousin of Bride" },
+  { name: "Amelia", role: "Bridesmaid", image: "/images/amelia.jpeg", relationship: "Friend of Bride" },
+  { name: "Andus", role: "Groomsman", image: "/images/andus.jpg", relationship: "Friend of Groom" },
+  { name: "Corbin", role: "Bridesman", image: "/images/corbin.jpeg", relationship: "Cousin of Bride" },
+  { name: "Diane", role: "Bridesmaid", image: "/images/diane.jpeg", relationship: "Friend of Bride" },
+  { name: "George D.", role: "Groomsman", image: "/images/georged.png", relationship: "Friend of Groom" },
+  { name: "Henrianna", role: "Bridesmaid", image: "/images/henrianna.jpeg", relationship: "Friend of Bride" },
+  { name: "Kayla", role: "Bridesmaid", image: "/images/kayla.JPG", relationship: "Cousin of Bride" },
+  { name: "Kenny", role: "Groomsman", image: "/images/kenny.jpg", relationship: "Friend of Groom" },
+  { name: "Korina", role: "Bridesmaid", image: "/images/korina.jpeg", relationship: "Friend of Bride" },
+  { name: "Jacob", role: "Bridesman", image: "/images/jacob.jpeg", relationship: "Cousin of Bride" },
+  { name: "Robert", role: "Groomsman", image: "/images/robert.jpg", relationship: "Brother of Groom" },
+  { name: "Sarah", role: "Bridesmaid", image: "/images/sarah.jpeg", relationship: "Sister of Bride" },
+  { name: "Savannah", role: "Bridesmaid", image: "/images/savannah.jpeg", relationship: "Sister of Bride" },
+  { name: "Stephanie", role: "Bridesmaid", image: "/images/steph.jpeg", relationship: "Friend of Bride" },
+];
+
 export default function WeddingParty() {
-    return (
-        <div class="body-container">
-            <div class="title">Wedding Party</div>
-            <div className={styles.people}>
-                <div className={styles.person}>
-                    <Image src="/images/blank-profile.webp" width="190" height="190"/>
-                    <div className={styles.name}>Name</div>
-                    <div className={styles.role}>Bridesmaid</div>
-                </div>
-                <div className={styles.person}>
-                    <Image src="/images/blank-profile.webp" width="190" height="190"/>
-                    <div className={styles.name}>Name</div>
-                    <div className={styles.role}>Bridesmaid</div>
-                </div>
-                <div className={styles.person}>
-                    <Image src="/images/blank-profile.webp" width="190" height="190"/>
-                    <div className={styles.name}>Name</div>
-                    <div className={styles.role}>Bridesmaid</div>
-                </div>
-                <div className={styles.person}>
-                    <Image src="/images/blank-profile.webp" width="190" height="190"/>
-                    <div className={styles.name}>Name</div>
-                    <div className={styles.role}>Bridesmaid</div>
-                </div>
-                <div className={styles.person}>
-                    <Image src="/images/blank-profile.webp" width="190" height="190"/>
-                    <div className={styles.name}>Name</div>
-                    <div className={styles.role}>Bridesmaid</div>
-                </div>
-                <div className={styles.person}>
-                    <Image src="/images/blank-profile.webp" width="190" height="190"/>
-                    <div className={styles.name}>Name</div>
-                    <div className={styles.role}>Bridesmaid</div>
-                </div>
-                <div className={styles.person}>
-                    <Image src="/images/blank-profile.webp" width="190" height="190"/>
-                    <div className={styles.name}>Name</div>
-                    <div className={styles.role}>Bridesmaid</div>
-                </div>
-                <div className={styles.person}>
-                    <Image src="/images/blank-profile.webp" width="190" height="190"/>
-                    <div className={styles.name}>Name</div>
-                    <div className={styles.role}>Bridesmaid</div>
-                </div>
-                <div className={styles.person}>
-                    <Image src="/images/blank-profile.webp" width="190" height="190"/>
-                    <div className={styles.name}>Name</div>
-                    <div className={styles.role}>Bridesmaid</div>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div class="body-container">
+      <div class="title">Wedding Party</div>
+
+      <div className={styles.people}>
+        {weddingParty.map((person, index) => (
+          <div key={index} className={styles.person}>
+            <Image
+              src={person.image}
+              width={190}
+              height={190}
+              alt={person.name}
+              className={styles.profileImage}
+            />
+            <div className={styles.name}>{person.name}</div>
+            <div className={styles.role}>{person.role}</div>
+            <div className={styles.relationship}>{person.relationship}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

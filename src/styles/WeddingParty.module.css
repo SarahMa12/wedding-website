@@ -6,7 +6,12 @@
 }
 
 .person img {
-    border-radius: 50%;
+    width: 190px;           /* or whatever fixed size you want */
+    height: 190px;
+    border-radius: 50%;     /* keeps it circular */
+    object-fit: cover;      /* ensures image fills the circle without stretching */
+    overflow: hidden;       /* hide any overflow (mostly for safety) */
+    display: block;
 }
 
 .person {
@@ -15,3 +20,4 @@
     align-items: center;
     gap: 0.5rem;
 }
+
