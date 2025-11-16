@@ -34,6 +34,7 @@ export default function Navbar() {
                     <li><Link href="/our-story">Our Story</Link></li>
                     <li><Link href="/wedding-party">Wedding Party</Link></li>
                     <li><Link href="/wedding-details">Wedding Details</Link></li>
+                    <li><Link href="/travel">Travel</Link></li>
                     <li><Link href="/faq">FAQ</Link></li>
                     <li><Link href="/registry">Registry</Link></li>
                 </ul>
@@ -45,7 +46,8 @@ export default function Navbar() {
                             <li><Link href="/rsvp" onClick={() => setMenuOpen(false)}>RSVP</Link></li>
                             <li><Link href="/our-story" onClick={() => setMenuOpen(false)}>Our Story</Link></li>
                             <li><Link href="/wedding-party" onClick={() => setMenuOpen(false)}>Wedding Party</Link></li>
-                            <li><Link href="/wedding-details" onClick={() => setMenuOpen(false)}>Wedding Details</Link></li>                            
+                            <li><Link href="/wedding-details" onClick={() => setMenuOpen(false)}>Wedding Details</Link></li>     
+                            <li><Link href="/travel" onClick={() => setMenuOpen(false)}>Travel</Link></li>                            
                             <li><Link href="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link></li>
                             <li><Link href="/registry" onClick={() => setMenuOpen(false)}>Registry</Link></li>
                         </ul>
