@@ -18,6 +18,7 @@ export default function Home() {
             alt="Syrena & George"
             fill
             style={{ objectFit: "cover" }} // fills container, zooms/crops if needed
+            quality={100}
           />
         </div>
       </div>

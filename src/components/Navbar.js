@@ -26,10 +26,11 @@ export default function Navbar() {
                         <div className={styles.menuImageWrapper}>
                             <Image 
                                 src="/images/menu.jpeg" 
-                                width={300} 
-                                height={600} 
+                                width={1200} 
+                                height={800} 
                                 alt="Menu Image"
                                 className={styles.menuImage}
+                                quality={100}
                             />
                         </div>
                         
