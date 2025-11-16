@@ -104,3 +104,11 @@
     color: rgb(50, 50, 50); /* slightly darker text */
     border-bottom-color: black; /* show underline */
 }
+
+
+@media (max-width: 600px) {
+    .navButton img {
+        width: 18px !important;
+        height: 18px !important;
+    }
+}
