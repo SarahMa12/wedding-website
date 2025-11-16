@@ -1,17 +1,35 @@
-.heroImage {
-    position: relative;
-    width: 100vw;          
-    height: calc(100vh - 100px); 
-    z-index: 0; 
-    overflow: hidden;           
+.bodyContainer {
     display: flex;
-    justify-content: center; /* horizontal center */
-    align-items: center;     /* vertical center */
+    justify-content: center;
+    align-items: center;
 }
 
-.imageWrapper {
-    max-width: 1200px;   /* natural width of image */
-    max-height: 800px;   /* natural height of image */
+.heroImage {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Default: small screens scale normally */
+.heroImage :global(img) {
+    object-fit: contain;
+    object-position: center center;
     width: 100%;
-    height: auto;
+    height: 100%;
+}
+
+/* Large screens (>=1200px): stop scaling up & keep centered */
+@media (min-width: 1200px) {
+    .heroImage :global(img) {
+        width: auto;
+        height: auto;          /* important fix */
+        max-width: 1200px;
+        max-height: 100%;
+        object-fit: contain;
+        margin: auto;          /* ensure perfect centering */
+    }
 }

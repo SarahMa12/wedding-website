@@ -22,19 +22,32 @@ export default function Navbar() {
 
                 {menuOpen && (
                     <div className={styles.mobileMenu}>
-                        <ul className={styles.mobileNavlinks}>
-                            <li><Link href="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-                            <li><Link href="/rsvp" onClick={() => setMenuOpen(false)}>RSVP</Link></li>
-                            <li><Link href="/our-story" onClick={() => setMenuOpen(false)}>Our Story</Link></li>
-                            <li><Link href="/wedding-party" onClick={() => setMenuOpen(false)}>Wedding Party</Link></li>
-                            <li><Link href="/wedding-details" onClick={() => setMenuOpen(false)}>Wedding Details</Link></li>     
-                            <li><Link href="/travel" onClick={() => setMenuOpen(false)}>Travel</Link></li>                            
-                            <li><Link href="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link></li>
-                            <li><Link href="/registry" onClick={() => setMenuOpen(false)}>Registry</Link></li>
-                        </ul>
-                        <button className={styles.closeButton} onClick={() => setMenuOpen(false)}>
-                            <Image src="/images/close-icon.svg" width="25" height="25"/>
-                        </button>
+
+                        <div className={styles.menuImageWrapper}>
+                            <Image 
+                                src="/images/menu.jpeg" 
+                                width={300} 
+                                height={600} 
+                                alt="Menu Image"
+                                className={styles.menuImage}
+                            />
+                        </div>
+                        
+                        <div className={styles.mobileNavPanel}>
+                            <ul className={styles.mobileNavlinks}>
+                                <li><Link href="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+                                <li><Link href="/rsvp" onClick={() => setMenuOpen(false)}>RSVP</Link></li>
+                                <li><Link href="/our-story" onClick={() => setMenuOpen(false)}>Our Story</Link></li>
+                                <li><Link href="/wedding-party" onClick={() => setMenuOpen(false)}>Wedding Party</Link></li>
+                                <li><Link href="/wedding-details" onClick={() => setMenuOpen(false)}>Wedding Details</Link></li>     
+                                <li><Link href="/travel" onClick={() => setMenuOpen(false)}>Travel</Link></li>                            
+                                <li><Link href="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link></li>
+                                <li><Link href="/registry" onClick={() => setMenuOpen(false)}>Registry</Link></li>
+                            </ul>
+                            <button className={styles.closeButton} onClick={() => setMenuOpen(false)}>
+                                <Image src="/images/close-icon.svg" width="25" height="25"/>
+                            </button>
+                        </div>
                     </div>
                 )}
             </nav>

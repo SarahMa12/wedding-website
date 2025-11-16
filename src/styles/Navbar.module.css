@@ -60,10 +60,12 @@
     height: 100vh;
     background-color: rgb(241, 241, 241);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    z-index: 9999;  
+    z-index: 9999;
+    overflow: hidden;
 }
+
 
 .closeButton {
     position: absolute;
@@ -82,17 +84,50 @@
     font-size: 1.5rem;
 }
 
+.menuImageWrapper {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
 
-/* Navigation Link Interactions */
-/* Active page: stays underlined + darker text */
-.navLinks a.activeLink,
-.mobileNavlinks a.activeLink {
-    color: rgb(0, 0, 0);
-    border-bottom: 1px solid black;
+.menuImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Fills entire left half */
+    transform: translateY(-120%);
+    animation: slideDown 0.6s ease forwards;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-120%); }
+    to   { transform: translateY(0%); }
+}
+
+.mobileNavPanel {
+    width: 50%;
+    height: 100%;
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     /* vertical center */
+    align-items: center;         /* horizontal center */
+
+    gap: 1.5rem;
+    font-size: 1.5rem;
+
+    transform: translateY(120%);
+    animation: slideUp 0.6s ease forwards;
+    /* Remove padding-left so centering works */
+}
+
+
+@keyframes slideUp {
+    from { transform: translateY(120%); }
+    to   { transform: translateY(0%); }
 }
 
 /* Base link styles for desktop and mobile */
-.navLinks a,
 .mobileNavlinks a {
     padding-bottom: 2px;
     border-bottom: 1px solid transparent; /* hidden by default */
@@ -100,7 +135,6 @@
 }
 
 /* Hover effect: show underline + slightly darker text */
-.navLinks a:hover:not(.activeLink),
 .mobileNavlinks a:hover:not(.activeLink) {
     color: rgb(50, 50, 50); /* slightly darker text */
     border-bottom-color: black; /* show underline */
@@ -117,3 +151,5 @@
     }
     
 }
+
+
