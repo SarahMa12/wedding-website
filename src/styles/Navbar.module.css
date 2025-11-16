@@ -28,7 +28,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
     white-space: nowrap;
     font-family: 'Malibu Ring', cursive;
 }
@@ -105,10 +105,9 @@
     border-bottom-color: black; /* show underline */
 }
 
-
 @media (max-width: 600px) {
     .navButton img {
-        width: 18px !important;
-        height: 18px !important;
+        width: 16px !important;
+        height: 16px !important;
     }
 }
