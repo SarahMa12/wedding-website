@@ -1,0 +1,12 @@
+.bodyContainer {
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero image container sits right under navbar */
+.heroImage {
+    position: relative;    /* needed for next/image fill */
+    width: 100vw;          /* full width */
+    height: calc(100vh - 100px); /* full height minus navbar height, adjust 100px */
+    margin-top: 0;         /* start immediately under navbar */
+}

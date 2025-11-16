@@ -10,9 +10,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico"/>
       </Head>
-      <div class="body-container">
-            <div class="title">Home</div>
+
+      <div className={styles.bodyContainer}>
+        <div className={styles.heroImage}>
+          <Image
+            src="/images/home.jpeg"
+            alt="Syrena & George"
+            fill
+            style={{ objectFit: "contain" }}
+          />
         </div>
+      </div>
     </>
   );
 }
