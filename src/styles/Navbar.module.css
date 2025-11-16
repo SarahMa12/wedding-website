@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
+    
     padding: 3rem 2rem 1rem;
     gap: 3rem;
     background-color: rgb(218, 218, 218);
@@ -140,7 +141,7 @@
     border-bottom-color: black; /* show underline */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) {  
     .navButton img, .closeButton img {
         width: 16px !important;
         height: 16px !important;
@@ -149,7 +150,8 @@
     .navButton, .closeButton {
         margin-right: -.5rem;
     }
-    
+
+    .mobileNavlinks a {
+        font-size: 1.2rem;  /* adjust as needed */
+    }
 }
-
-
