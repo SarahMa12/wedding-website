@@ -1,4 +1,26 @@
-.formGroup {
+.formQuestion {
     display: flex;
     flex-direction: column;
 }
+
+.rsvpForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sectionHeader {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.formQuestion textarea {
+  resize: none;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
