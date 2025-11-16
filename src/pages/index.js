@@ -17,7 +17,7 @@ export default function Home() {
             src="/images/home.jpeg"
             alt="Syrena & George"
             fill
-            style={{ objectFit: "contain" }}
+            style={{ objectFit: "cover" }} // fills container, zooms/crops if needed
           />
         </div>
       </div>
