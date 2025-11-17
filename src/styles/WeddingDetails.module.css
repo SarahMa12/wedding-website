@@ -16,18 +16,18 @@
     font-family: 'Malibu Ring', cursive;
     font-size: 2rem;
     font-weight: 700;
-    color: #DABA7B;
+    color: #c7a96e;
 }
 
 .sectionTitle {
     font-size: 1.5rem;  
-    color: #DABA7B; 
+    color: #c7a96e;
     font-style: italic;
     font-family: cursive; 
 }
 
 .weddingDate {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .weddingLocation {
