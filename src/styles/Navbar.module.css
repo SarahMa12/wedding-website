@@ -14,7 +14,7 @@
     
     padding: 3rem 2rem 1rem;
     gap: 3rem;
-    background-color: rgb(218, 218, 218);
+        border-bottom: 1px solid black;
 }
 
 .topNav {
@@ -32,6 +32,9 @@
     font-size: clamp(1.2rem, 5vw, 2.5rem);
     white-space: nowrap;
     font-family: 'Malibu Ring', cursive;
+    color: #907e59; 
+    font-weight: 700;
+
 }
 
 .navButton {
