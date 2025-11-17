@@ -41,6 +41,7 @@ export default function Navbar() {
                             alt="Menu Image"
                             className={styles.menuImage}
                             quality={100}
+                            priority
                         />
                     </div>
 

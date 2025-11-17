@@ -94,27 +94,17 @@
     overflow: hidden;
 }
 
+/* Image animation */
 .menuImage {
     width: 100%;
     height: 100%;
-    object-fit: cover;   /* Fills entire left half */
+    object-fit: cover;
     transform: translateY(-120%);
-    opacity: 0;          /* start invisible */
-    animation: fadeSlideDown 0.75s ease-out forwards; /* slightly slower + smoother */
+    opacity: 0;
+    animation: fadeSlideDown 0.75s ease-out 0.05s forwards; /* small delay */
 }
 
-
-@keyframes fadeSlideDown {
-    from {
-        transform: translateY(-120%);
-        opacity: 0.5;
-    }
-    to {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
-
+/* Panel animation */
 .mobileNavPanel {
     width: 50%;
     height: 100%;
@@ -130,46 +120,41 @@
 
     transform: translateY(120%);
     opacity: 0;
-
-    animation: fadeSlideUp 0.75s ease-out forwards;
+    animation: fadeSlideUp 0.75s ease-out 0.1s forwards; /* panel starts slightly after image */
 }
 
-
-
-@keyframes fadeSlideUp {
-    from {
-        transform: translateY(120%);
-        opacity: 0.5;
-    }
-    to {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
-
+/* Links fade + slide with stagger */
 .mobileNavlinks a {
     opacity: 0;
     transform: translateY(10px);
     animation: fadeLink 0.6s ease-out forwards;
 }
 
+/* Stagger delays for links */
 .mobileNavlinks a:nth-child(1) { animation-delay: 0.15s; }
 .mobileNavlinks a:nth-child(2) { animation-delay: 0.22s; }
 .mobileNavlinks a:nth-child(3) { animation-delay: 0.29s; }
 .mobileNavlinks a:nth-child(4) { animation-delay: 0.36s; }
 .mobileNavlinks a:nth-child(5) { animation-delay: 0.43s; }
+.mobileNavlinks a:nth-child(6) { animation-delay: 0.50s; }
+.mobileNavlinks a:nth-child(7) { animation-delay: 0.57s; }
+.mobileNavlinks a:nth-child(8) { animation-delay: 0.64s; }
 
+@keyframes fadeSlideDown {
+    from { transform: translateY(-120%); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeSlideUp {
+    from { transform: translateY(120%); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
 
 @keyframes fadeLink {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { transform: translateY(10px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
 }
+
 
 
 /* Base link styles for desktop and mobile */
