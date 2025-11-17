@@ -10,13 +10,13 @@ export default function Navbar() {
 
     const navLinks = [
         { href: "/", label: "Home" },
-        { href: "/rsvp", label: "RSVP" },
-        { href: "/our-story", label: "Our Story" },
-        { href: "/wedding-party", label: "Wedding Party" },
         { href: "/wedding-details", label: "Wedding Details" },
+        { href: "/rsvp", label: "RSVP" },
+        { href: "/wedding-party", label: "Wedding Party" },
+        { href: "/our-story", label: "Our Story" },
         { href: "/travel", label: "Travel" },
-        { href: "/faq", label: "FAQ" },
         { href: "/registry", label: "Registry" },
+        { href: "/faq", label: "FAQ" },
     ];
 
     return (
