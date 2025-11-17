@@ -1,14 +1,26 @@
+import Image from "next/image";
 import styles from "@/styles/WeddingDetails.module.css";
 
 export default function WeddingDetails() {
     return (
-        <div class="body-container">
+        <div className="body-container">
+            
+            <div className={styles.topImageWrapper}>
+                <Image
+                    src="/images/details.jpg"
+                    alt="Wedding Details"
+                    layout="fill"
+                    objectFit="cover"
+                    priority
+                />
+            </div>
+
             <div className={styles.bigEvent}>
                 <div className={styles.info}>
                     <div className={styles.sectionTitle}>
-                        <span className={styles.letter}>T</span>he 
-                        <span className={styles.letter}>W</span>elcome 
-                        <span className={styles.letter}>P</span>arty
+                        <span className={styles.word}><span className={styles.letter}>T</span>he</span>
+                        <span className={styles.word}><span className={styles.letter}>W</span>elcome</span>
+                        <span className={styles.word}><span className={styles.letter}>P</span>arty</span>
                     </div>
                     <div className={styles.weddingDate}>Friday, September 11, 2026</div>
                     <div className={styles.weddingLocation}>
@@ -19,10 +31,11 @@ export default function WeddingDetails() {
 
             <div className={styles.bigEvent}>
                 <div className={styles.info}>
-                <div className={styles.sectionTitle}>
-                        <span className={styles.letter}>T</span>he 
-                        <span className={styles.letter}>W</span>edding
-                    </div>                    <div className={styles.weddingDate}>Saturday, September 12, 2026</div>
+                    <div className={styles.sectionTitle}>
+                        <span className={styles.word}><span className={styles.letter}>T</span>he</span>
+                        <span className={styles.word}><span className={styles.letter}>W</span>edding</span>
+                    </div>                    
+                    <div className={styles.weddingDate}>Saturday, September 12, 2026</div>
                     <div className={styles.weddingLocation}>
                         Location: 2551 Mount Pleasant Rd, San Jose, CA, 95148
                     </div>
@@ -56,10 +69,11 @@ export default function WeddingDetails() {
             <div className={styles.bigEvent}>
                 <div className={styles.info}>
                     <div className={styles.sectionTitle}>
-                        <span className={styles.letter}>T</span>he 
-                        <span className={styles.letter}>B</span>runch 
-                        <span className={styles.letter}>F</span>arewell
-                    </div>                    <div className={styles.weddingDate}>Sunday, September 13, 2026</div>
+                        <span className={styles.word}><span className={styles.letter}>T</span>he</span>
+                        <span className={styles.word}><span className={styles.letter}>B</span>runch</span>
+                        <span className={styles.word}><span className={styles.letter}>F</span>arewell</span>
+                    </div>                    
+                    <div className={styles.weddingDate}>Sunday, September 13, 2026</div>
                     <div className={styles.weddingLocation}>
                         Location: 3267 Knightswood Way, San Jose, CA, 95148
                     </div>

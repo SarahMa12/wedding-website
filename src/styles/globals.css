@@ -67,7 +67,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 2rem 4rem; /* default: small screens */
+  padding: 4rem 4rem; /* default: small screens */
 }
 
 @media (min-width: 768px) {

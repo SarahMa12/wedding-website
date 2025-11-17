@@ -33,3 +33,26 @@
 .weddingLocation {
     font-size: 1rem;
 }
+
+.sectionTitle {
+    display: flex;
+    gap: 6px;
+}
+
+/* Top half-circle image */
+.topImageWrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;          /* adjust height as needed */
+    overflow: hidden;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    margin-bottom: 1rem;
+    border: 1px solid #000;
+}
+
+.topImageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

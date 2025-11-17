@@ -23,8 +23,6 @@ const weddingParty = [
 export default function WeddingParty() {
   return (
     <div class="body-container">
-      <div class="title">Wedding Party</div>
-
       <div className={styles.people}>
         {weddingParty.map((person, index) => (
           <div key={index} className={styles.person}>
