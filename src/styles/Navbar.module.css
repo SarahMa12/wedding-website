@@ -34,7 +34,7 @@
     font-family: 'Malibu Ring', cursive;
     color: #907e59; 
     font-weight: 700;
-
+    text-decoration: none;
 }
 
 .navButton {
@@ -99,37 +99,78 @@
     height: 100%;
     object-fit: cover;   /* Fills entire left half */
     transform: translateY(-120%);
-    animation: slideDown 0.6s ease forwards;
+    opacity: 0;          /* start invisible */
+    animation: fadeSlideDown 0.75s ease-out forwards; /* slightly slower + smoother */
 }
 
-@keyframes slideDown {
-    from { transform: translateY(-120%); }
-    to   { transform: translateY(0%); }
+
+@keyframes fadeSlideDown {
+    from {
+        transform: translateY(-120%);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 .mobileNavPanel {
     width: 50%;
     height: 100%;
     list-style: none;
-    
+
     display: flex;
     flex-direction: column;
-    justify-content: center;     /* vertical center */
-    align-items: center;         /* horizontal center */
+    justify-content: center;
+    align-items: center;
 
     gap: 1.5rem;
     font-size: 1.5rem;
 
     transform: translateY(120%);
-    animation: slideUp 0.6s ease forwards;
-    /* Remove padding-left so centering works */
+    opacity: 0;
+
+    animation: fadeSlideUp 0.75s ease-out forwards;
 }
 
 
-@keyframes slideUp {
-    from { transform: translateY(120%); }
-    to   { transform: translateY(0%); }
+
+@keyframes fadeSlideUp {
+    from {
+        transform: translateY(120%);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
+
+.mobileNavlinks a {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeLink 0.6s ease-out forwards;
+}
+
+.mobileNavlinks a:nth-child(1) { animation-delay: 0.15s; }
+.mobileNavlinks a:nth-child(2) { animation-delay: 0.22s; }
+.mobileNavlinks a:nth-child(3) { animation-delay: 0.29s; }
+.mobileNavlinks a:nth-child(4) { animation-delay: 0.36s; }
+.mobileNavlinks a:nth-child(5) { animation-delay: 0.43s; }
+
+
+@keyframes fadeLink {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Base link styles for desktop and mobile */
 .mobileNavlinks a {
@@ -137,6 +178,13 @@
     border-bottom: 1px solid transparent; /* hidden by default */
     transition: color 0.25s ease, border-bottom-color 0.25s ease;
 }
+
+/* Highlight active link */
+.mobileNavlinks a.activeLink {
+    border-bottom-color: black;  /* underline */
+    color: rgb(50, 50, 50);      /* slightly darker text */
+}
+
 
 /* Hover effect: show underline + slightly darker text */
 .mobileNavlinks a:hover:not(.activeLink) {
@@ -158,3 +206,4 @@
         font-size: 1.2rem;  /* adjust as needed */
     }
 }
+

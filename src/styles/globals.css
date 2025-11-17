@@ -64,6 +64,8 @@ body {
 }
 
 .body-container {
+  height: 100%;
+  background-color: #fefcf6;
   display: flex;
   flex-direction: column;
   gap: 2rem;

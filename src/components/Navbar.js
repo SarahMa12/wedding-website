@@ -1,57 +1,70 @@
-import { useState, useEffect } from "react";
-import Link from 'next/link';
-import Image from 'next/image'
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/router";
 import styles from "@/styles/Navbar.module.css";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const router = useRouter();
 
+    const navLinks = [
+        { href: "/", label: "Home" },
+        { href: "/rsvp", label: "RSVP" },
+        { href: "/our-story", label: "Our Story" },
+        { href: "/wedding-party", label: "Wedding Party" },
+        { href: "/wedding-details", label: "Wedding Details" },
+        { href: "/travel", label: "Travel" },
+        { href: "/faq", label: "FAQ" },
+        { href: "/registry", label: "Registry" },
+    ];
 
     return (
-        <>
-            <nav className={styles.navBar}>
+        <nav className={styles.navBar}>
+            <div className={styles.topNav}>
+                <Link href="/" legacyBehavior>
+                    <a className={styles.logo}>Syrena and George</a>
+                </Link>
 
-                <div className={styles.topNav}>
-                    <div className={styles.logo}>Syrena and George</div>
+                <button className={styles.navButton} onClick={() => setMenuOpen(true)}>
+                    <Image src="/images/nav-icon.svg" width="25" height="25" />
+                </button>
+            </div>
 
-                    <button className={styles.navButton} onClick={() => setMenuOpen(true)}>
-                        <Image src="/images/nav-icon.svg" width="25" height="25"/>
-                    </button>
-                </div>
-           
-
-                {menuOpen && (
-                    <div className={styles.mobileMenu}>
-
-                        <div className={styles.menuImageWrapper}>
-                            <Image 
-                                src="/images/menu.jpeg" 
-                                width={1200} 
-                                height={800} 
-                                alt="Menu Image"
-                                className={styles.menuImage}
-                                quality={100}
-                            />
-                        </div>
-                        
-                        <div className={styles.mobileNavPanel}>
-                            <ul className={styles.mobileNavlinks}>
-                                <li><Link href="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-                                <li><Link href="/rsvp" onClick={() => setMenuOpen(false)}>RSVP</Link></li>
-                                <li><Link href="/our-story" onClick={() => setMenuOpen(false)}>Our Story</Link></li>
-                                <li><Link href="/wedding-party" onClick={() => setMenuOpen(false)}>Wedding Party</Link></li>
-                                <li><Link href="/wedding-details" onClick={() => setMenuOpen(false)}>Wedding Details</Link></li>     
-                                <li><Link href="/travel" onClick={() => setMenuOpen(false)}>Travel</Link></li>                            
-                                <li><Link href="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link></li>
-                                <li><Link href="/registry" onClick={() => setMenuOpen(false)}>Registry</Link></li>
-                            </ul>
-                            <button className={styles.closeButton} onClick={() => setMenuOpen(false)}>
-                                <Image src="/images/close-icon.svg" width="25" height="25"/>
-                            </button>
-                        </div>
+            {menuOpen && (
+                <div className={styles.mobileMenu}>
+                    <div className={styles.menuImageWrapper}>
+                        <Image
+                            src="/images/menu.jpeg"
+                            width={1200}
+                            height={800}
+                            alt="Menu Image"
+                            className={styles.menuImage}
+                            quality={100}
+                        />
                     </div>
-                )}
-            </nav>
-        </>
-    )
+
+                    <div className={styles.mobileNavPanel}>
+                        <ul className={styles.mobileNavlinks}>
+                            {navLinks.map((link) => (
+                                <li key={link.href}>
+                                    <Link href={link.href} legacyBehavior>
+                                        <a
+                                            className={router.pathname === link.href ? styles.activeLink : ""}
+                                            onClick={() => setMenuOpen(false)}
+                                        >
+                                            {link.label}
+                                        </a>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                        <button className={styles.closeButton} onClick={() => setMenuOpen(false)}>
+                            <Image src="/images/close-icon.svg" width="25" height="25" />
+                        </button>
+                    </div>
+                </div>
+            )}
+        </nav>
+    );
 }
