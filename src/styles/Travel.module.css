@@ -1,0 +1,12 @@
+.header {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.airportName, .hotelName {
+    font-size: 1.4rem;;
+}
+
+.hotelName {
+    text-decoration: none;
+}
