@@ -1,35 +1,36 @@
 .bodyContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* HERO CONTAINER */
 .heroImage {
-    position: relative;
-    width: 100vw;
-    height: calc(100vh - 100px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  width: 100vw;
+  height: calc(100vh - 100px);  /* full screen minus navbar */
+  overflow: hidden;
+  position: relative;
 }
 
-/* Default: small screens scale normally */
-.heroImage :global(img) {
-    object-fit: contain;
-    object-position: center center;
-    width: 100%;
-    height: 100%;
+/* IMAGE DEFAULT – mobile/tablet */
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* keeps full image visible */
+  object-position: center;
 }
 
-/* Large screens (>=1200px): stop scaling up & keep centered */
+/* DESKTOP (>=1200px) */
 @media (min-width: 1200px) {
-    .heroImage :global(img) {
-        width: auto;
-        height: auto;          /* important fix */
-        max-width: 1200px;
-        max-height: 100%;
-        object-fit: contain;
-        margin: auto;          /* ensure perfect centering */
-    }
+  .heroImage {
+    height: auto;         /* allow image to grow */
+    min-height: 100vh;    /* always at least full screen */
+  }
+
+  .heroImg {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;    /* forces full height */
+    object-fit: cover;    /* zoom + crop top/bottom */
+  }
 }
