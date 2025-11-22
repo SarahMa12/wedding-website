@@ -22,7 +22,7 @@ export default function WeddingDetails() {
                         <span className={styles.word}><span className={styles.letter}>W</span>elcome</span>
                         <span className={styles.word}><span className={styles.letter}>P</span>arty</span>
                     </div>
-                    <div className={styles.weddingDate}>Friday, September 11, 2026</div>
+                    <div className={styles.weddingDate}>FRIDAY, SEPTEMBER 11, 2026</div>
                     <div className={styles.weddingLocation}>
                         <img src="/images/location.svg" alt="" className={styles.locationIcon} />
                         <span className={styles.weddingLocationText}>
@@ -51,7 +51,7 @@ export default function WeddingDetails() {
                         <span className={styles.word}><span className={styles.letter}>T</span>he</span>
                         <span className={styles.word}><span className={styles.letter}>W</span>edding</span>
                     </div>                    
-                    <div className={styles.weddingDate}>Saturday, September 12, 2026</div>
+                    <div className={styles.weddingDate}>SATURDAY, SEPTEMBER 12, 2026</div>
                     <div className={styles.weddingLocation}>
                         <img src="/images/location.svg" alt="" className={styles.locationIcon} />
                         <span className={styles.weddingLocationText}>
@@ -69,12 +69,28 @@ export default function WeddingDetails() {
                 <div className={styles.schedule}>
                     <div className={styles.scheduleTitle}>Schedule</div>
 
-                    <div className={styles.event}>
-                        <div className={styles.eventName}><span className={styles.time}>4:30 PM</span> Guest Arrival</div>
-                        <div className={styles.eventName}><span className={styles.time}>5:00 PM</span> Wedding Ceremony</div>
-                        <div className={styles.eventName}><span className={styles.time}>6:00 PM</span> Cocktail Hour</div>
-                        <div className={styles.eventName}><span className={styles.time}>7:00 PM</span> Wedding Reception</div>                        
+                    <div className={styles.eventGrid}>
+                        <div className={styles.eventRow}>
+                            <span className={styles.time}>4:30 PM</span>
+                            <span className={styles.eventLabel}>Guest Arrival</span>
+                        </div>
+
+                        <div className={styles.eventRow}>
+                            <span className={styles.time}>5:00 PM</span>
+                            <span className={styles.eventLabel}>Wedding Ceremony</span>
+                        </div>
+
+                        <div className={styles.eventRow}>
+                            <span className={styles.time}>6:00 PM</span>
+                            <span className={styles.eventLabel}>Cocktail Hour</span>
+                        </div>
+
+                        <div className={styles.eventRow}>
+                            <span className={styles.time}>7:00 PM</span>
+                            <span className={styles.eventLabel}>Wedding Reception</span>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
@@ -85,7 +101,7 @@ export default function WeddingDetails() {
                         <span className={styles.word}><span className={styles.letter}>B</span>runch</span>
                         <span className={styles.word}><span className={styles.letter}>F</span>arewell</span>
                     </div>                    
-                    <div className={styles.weddingDate}>Sunday, September 13, 2026</div>
+                    <div className={styles.weddingDate}>SUNDAY, SEPTEMBER 13, 2026</div>
                     <div className={styles.weddingLocation}>
                         <img src="/images/location.svg" alt="" className={styles.locationIcon} />
                         <span className={styles.weddingLocationText}>

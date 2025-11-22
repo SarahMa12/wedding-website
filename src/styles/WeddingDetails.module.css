@@ -1,10 +1,3 @@
-@font-face {
-    font-family: 'Malibu Ring';
-    src: url('/fonts/malibu-ring.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* General body container tweaks */
 .body-container {
     max-width: 1200px;
@@ -69,41 +62,30 @@
     gap: 6px;
     font-size: 1.8rem;
     color: #c7a96e;
-    font-style: italic;
     font-weight: 700;
     flex-wrap: wrap;
 }
 
 .word {
     display: flex;
-    gap: 6px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #c7a96e;
-    font-style: italic;
     font-weight: 700;
     flex-wrap: wrap;
-    
+    font-family: 'Amoresa', cursive;
 }
 
 .letter {
-    font-family: 'Malibu Ring', cursive;
+    font-family: 'Amoresa', cursive;
     font-size: 2rem;
     font-weight: 700;
     color: #c7a96e;
     font-style: normal;
 }
 
-.sectionTitle {
-    font-size: 1.5rem;  
-    color: #c7a96e;
-    font-style: italic;
-    font-family: cursive; 
-    font-weight: 700;
-}
-
 .weddingDate {
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
 }
 
 .weddingLocation {
@@ -127,6 +109,7 @@
 .attire {
     font-size: 1rem;
     font-weight: 500;
+    font-style: italic;
 }
 
 .desc {
@@ -161,16 +144,28 @@
     gap: 1rem 2rem; /* vertical gap 1rem, horizontal 2rem */
 }
 
-.eventName {
-    font-size: 1rem;
+.eventGrid {
     display: flex;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.eventRow {
+    display: grid;
+    grid-template-columns: 90px 1fr;   /* more width for the time */
     align-items: center;
+    gap: 1rem;
 }
 
 .time {
     font-weight: 600;
+    white-space: nowrap;                /* prevents wrapping */
 }
+
+.eventLabel {
+    font-size: 1rem;
+}
+
 
 /* Responsive tweaks */
 @media (max-width: 900px) {

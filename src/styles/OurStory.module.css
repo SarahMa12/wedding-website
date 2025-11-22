@@ -11,7 +11,7 @@
 }
 
 .pageTitle {
-  font-family: 'Malibu Ring', cursive;
+  font-family: 'Amoresa', cursive;
   font-size: 3rem;
   text-align: center;
   color: #c7a96e;
@@ -29,7 +29,7 @@
 }
 
 .sectionTitle {
-  font-family: 'Malibu Ring', cursive;
+  font-family: 'Amoresa', cursive;
   font-size: 2rem;
   color: #c7a96e;
   margin-bottom: 1rem;
@@ -51,10 +51,9 @@
 
 .sectionTitle {
     display: flex;
-    gap: 6px;
+    gap: 12px;
     font-size: 1.8rem;
     color: #c7a96e;
-    font-style: italic;
     font-weight: 700;
     flex-wrap: wrap;
 }
@@ -64,24 +63,15 @@
     gap: 2px;
     font-size: 1.8rem;
     color: #c7a96e;
-    font-style: italic;
     font-weight: 700;
     flex-wrap: wrap;
-    
+    font-family: 'Amoresa', cursive;
 }
 
 .letter {
-    font-family: 'Malibu Ring', cursive;
+    font-family: 'Amoresa', cursive;
     font-size: 2rem;
     font-weight: 700;
     color: #c7a96e;
     font-style: normal;
-}
-
-.sectionTitle {
-    font-size: 1.5rem;  
-    color: #c7a96e;
-    font-style: italic;
-    font-family: cursive; 
-    font-weight: 700;
 }

@@ -23,7 +23,20 @@
 }
 
 .name {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     margin-top: 0.5rem;
+    color: #c7a96e;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.relationship {
+    font-style: italic;
 }

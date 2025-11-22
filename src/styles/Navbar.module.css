@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'Malibu Ring';
-    src: url('/fonts/malibu-ring.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Amoresa";
+  src: url("/fonts/Amoresa.woff2") format("woff2"),
+       url("/fonts/Amoresa.otf") format("opentype");
+  font-display: swap;
 }
 
 .navBar {
@@ -11,10 +11,10 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
-    
     padding: 3rem 2rem 1rem;
     gap: 3rem;
-        border-bottom: 1px solid black;
+    border-bottom: 1px solid #c7a96e;
+;
 }
 
 .topNav {
@@ -31,10 +31,11 @@
     transform: translateX(-50%);
     font-size: clamp(1.2rem, 5vw, 2.5rem);
     white-space: nowrap;
-    font-family: 'Malibu Ring', cursive;
+    font-family: 'Amoresa', cursive;
     color: #907e59; 
     font-weight: 700;
     text-decoration: none;
+    letter-spacing: 2px;
 }
 
 .navButton {
