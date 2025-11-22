@@ -103,8 +103,13 @@
 .weddingLocation {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 8px;
     font-size: 1rem;
+}
+
+.weddingLocationText {
+    display: inline-block;
+    line-height: 1.7;      /* ensures no extra spacing */
 }
 
 .locationIcon {
