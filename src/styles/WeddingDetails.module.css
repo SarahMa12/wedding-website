@@ -76,7 +76,13 @@
 
 .word {
     display: flex;
-    align-items: baseline;
+    gap: 6px;
+    font-size: 1.8rem;
+    color: #c7a96e;
+    font-style: italic;
+    font-weight: 700;
+    flex-wrap: wrap;
+    
 }
 
 .letter {
