@@ -4,6 +4,7 @@ import styles from "@/styles/WeddingParty.module.css";
 // Example data for the wedding party
 const weddingParty = [
   { name: "Caitlin", role: "Maid of Honor", image: "/images/caitlin.png", relationship: "Cousin of Bride" },
+  { name: "Robert", role: "Best Man", image: "/images/robert.png", relationship: "Brother of Groom" },
   { name: "Amelia", role: "Bridesmaid", image: "/images/amelia.jpeg", relationship: "Friend of Bride" },
   { name: "Andus", role: "Groomsman", image: "/images/andus.jpg", relationship: "Friend of Groom" },
   { name: "Corbin", role: "Bridesman", image: "/images/corbin.jpeg", relationship: "Cousin of Bride" },
@@ -14,10 +15,12 @@ const weddingParty = [
   { name: "Kenny", role: "Groomsman", image: "/images/kenny.jpg", relationship: "Friend of Groom" },
   { name: "Korina", role: "Bridesmaid", image: "/images/korina.jpeg", relationship: "Friend of Bride" },
   { name: "Jacob", role: "Bridesman", image: "/images/jacob.jpeg", relationship: "Cousin of Bride" },
-  { name: "Robert", role: "Groomsman", image: "/images/robert.jpg", relationship: "Brother of Groom" },
   { name: "Sarah", role: "Bridesmaid", image: "/images/sarah.jpeg", relationship: "Sister of Bride" },
   { name: "Savannah", role: "Bridesmaid", image: "/images/savannah.jpeg", relationship: "Sister of Bride" },
   { name: "Stephanie", role: "Bridesmaid", image: "/images/steph.jpeg", relationship: "Friend of Bride" },
+  { name: "Koko", role: "Ring Bearer", image: "/images/koko.png", relationship: "Furbaby of Groom and Bride" },
+  { name: "Teddy", role: "Ring Bearer", image: "/images/teddy.png", relationship: "Furbaby of Groom and Bride" },
+
 ];
 
 export default function WeddingParty() {
