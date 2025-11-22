@@ -61,7 +61,9 @@ export default function WeddingDetails() {
                     <div className={styles.attire}>
                         Attire: Formal, black-tie optional
                     </div>
-                    
+                    <div className={styles.desc}>
+                        We're celebrating out love with a dreamy backyard ceremony surrounded by flowers, family, and the people we adore most. Cozy, heartfelt, and filled with moments we'll remember forever.
+                    </div>
                 </div>
 
                 <div className={styles.schedule}>
