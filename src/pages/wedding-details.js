@@ -24,7 +24,23 @@ export default function WeddingDetails() {
                     </div>
                     <div className={styles.weddingDate}>Friday, September 11, 2026</div>
                     <div className={styles.weddingLocation}>
-                        Location: 3267 Knightswood Way, San Jose, CA, 95148
+                        <img src="/images/location.svg" alt="" className={styles.locationIcon} />
+                        <span className={styles.weddingLocationText}>
+                            3267 Knightswood Way, San Jose, CA, 95148
+                        </span>
+                    </div>
+                    <div className={styles.attire}>
+                        Attire: Cocktail
+                    </div>
+                    <div className={styles.desc}>
+                        Everyone is welcome to join us for drinks and bites as we celebrate the start of an incredible wedding weekend.
+                    </div>
+                </div>
+                <div className={styles.schedule}>
+                    <div className={styles.scheduleTitle}>Schedule</div>
+
+                    <div className={styles.event}>
+                        TBA
                     </div>
                 </div>
             </div>
@@ -37,31 +53,25 @@ export default function WeddingDetails() {
                     </div>                    
                     <div className={styles.weddingDate}>Saturday, September 12, 2026</div>
                     <div className={styles.weddingLocation}>
-                        Location: 2551 Mount Pleasant Rd, San Jose, CA, 95148
+                        <img src="/images/location.svg" alt="" className={styles.locationIcon} />
+                        <span className={styles.weddingLocationText}>
+                            2551 Mount Pleasant Rd, San Jose, CA, 95148
+                        </span>
                     </div>
+                    <div className={styles.attire}>
+                        Attire: Formal, black-tie optional
+                    </div>
+                    
                 </div>
 
                 <div className={styles.schedule}>
                     <div className={styles.scheduleTitle}>Schedule</div>
 
                     <div className={styles.event}>
-                        <div className={styles.eventName}>Guest Arrival</div>
-                        <div className={styles.eventTime}>4:30 PM</div>
-                    </div>
-
-                    <div className={styles.event}>
-                        <div className={styles.eventName}>Wedding Ceremony</div>
-                        <div className={styles.eventTime}>5:00 PM</div>
-                    </div>
-
-                    <div className={styles.event}>
-                        <div className={styles.eventName}>Cocktail Hour</div>
-                        <div className={styles.eventTime}>6:00 PM</div>
-                    </div>
-
-                    <div className={styles.event}>
-                        <div className={styles.eventName}>Wedding Reception</div>
-                        <div className={styles.eventTime}>7:00 PM</div>
+                        <div className={styles.eventName}><span className={styles.time}>4:30 PM</span> Guest Arrival</div>
+                        <div className={styles.eventName}><span className={styles.time}>5:00 PM</span> Wedding Ceremony</div>
+                        <div className={styles.eventName}><span className={styles.time}>6:00 PM</span> Cocktail Hour</div>
+                        <div className={styles.eventName}><span className={styles.time}>7:00 PM</span> Wedding Reception</div>                        
                     </div>
                 </div>
             </div>
@@ -75,7 +85,23 @@ export default function WeddingDetails() {
                     </div>                    
                     <div className={styles.weddingDate}>Sunday, September 13, 2026</div>
                     <div className={styles.weddingLocation}>
-                        Location: 3267 Knightswood Way, San Jose, CA, 95148
+                        <img src="/images/location.svg" alt="" className={styles.locationIcon} />
+                        <span className={styles.weddingLocationText}>
+                            3267 Knightswood Way, San Jose, CA, 95148
+                        </span>
+                    </div>
+                    <div className={styles.attire}>
+                        Attire: Casual
+                    </div>
+                    <div className={styles.desc}>
+                        Join us the morning after the wedding for a laid-back poolside brunch with light bites.
+                    </div>
+                </div>
+                <div className={styles.schedule}>
+                    <div className={styles.scheduleTitle}>Schedule</div>
+
+                    <div className={styles.event}>
+                        TBA
                     </div>
                 </div>
             </div>
