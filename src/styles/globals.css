@@ -83,7 +83,7 @@ body {
 
 @media (min-width: 1024px) {
   .body-container {
-    padding: 2rem 15rem; /* large screens */
+    padding: 2rem 18rem; /* large screens */
   }
 }
 
