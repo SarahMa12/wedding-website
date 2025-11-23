@@ -18,6 +18,10 @@
     border-top-right-radius: 50% 50%;
     margin-bottom: 2rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+    max-width: 900px;    /* ⭐ matching card width */
+    margin-left: auto;
+    margin-right: auto;  /* ⭐ centers it perfectly */
 }
 
 .topImageWrapper img {
@@ -43,7 +47,13 @@
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     gap: 2rem;
     transition: transform 0.3s ease;
+
+    max-width: 900px;   /* ✔ keeps cards even on large screens */
+    margin: 0 auto;     /* ✔ centers them */
+    align-items: stretch; /* ✔ equal height columns */
 }
+
+
 
 .bigEvent:hover {
     transform: translateY(-5px);
