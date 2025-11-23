@@ -11,6 +11,7 @@
 }
 
 .storySection {
+  font-size: 1.1rem;
   background: #fdf7ec;
   padding: 2rem;
   border-radius: 1rem;
@@ -56,7 +57,7 @@
 
 .storyImageCard {
   position: relative;
-  width: calc(100% + 4rem); /* account for 2rem padding on left+right */
+  width: calc(100% + rem); /* account for 2rem padding on left+right */
   margin: 2rem -2rem 0 -2rem; /* negative margin to extend outside padding */
   padding-top: 56.25%; /* 16:9 aspect ratio */
   border-radius: 12px;

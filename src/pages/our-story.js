@@ -36,7 +36,7 @@ export default function OurStory() {
         </p>
         <div className={styles.storyImageCard}>
           <Image
-            src="/images/her-story.jpg"
+            src="/images/her-story.PNG"
             alt="Her story image"
             fill
             style={{ objectFit: "cover", borderRadius: "12px" }}
@@ -69,7 +69,7 @@ export default function OurStory() {
         </p>
         <div className={styles.storyImageCard}>
           <Image
-            src="/images/his-story.png"
+            src="/images/his-story.PNG"
             alt="His story image"
             fill
             style={{ objectFit: "cover", borderRadius: "12px" }}
