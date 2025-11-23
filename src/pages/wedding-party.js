@@ -26,7 +26,7 @@ const weddingParty = [
 export default function WeddingParty() {
   return (
     <div class="body-container">
-      <div className={styles.heading}>Meet our beautiful brial and groom party members whom we couldn't imagine getting married without</div>
+      <div className={styles.heading}>Meet our beautiful wedding party members whom we couldn't imagine getting married without</div>
       <div className={styles.people}>
         {weddingParty.map((person, index) => (
           <div key={index} className={styles.person}>
