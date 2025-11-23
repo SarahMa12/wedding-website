@@ -52,13 +52,16 @@
 }
 
 .storySection p {
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 .storyImageCard {
   margin: -5rem;
 }
 
+.storySection p:last-of-type {
+  margin-bottom: 2rem; 
+}
 
 @media (max-width: 600px) {
   .sectionTitle {
