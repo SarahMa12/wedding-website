@@ -53,7 +53,17 @@
     align-items: stretch; /* ✔ equal height columns */
 }
 
+.info,
+.schedule {
+    height: auto;
+    align-self: stretch;
+}
 
+.schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* makes content hug the top */
+}
 
 .bigEvent:hover {
     transform: translateY(-5px);
