@@ -7,7 +7,7 @@
 /* HERO WRAPPER */
 .heroWrapper {
   width: 100vw;
-  height: 100vh; /* full viewport */
+  height: calc(100vh - 100px);  /* full screen minus navbar */
   position: relative;
   overflow: hidden;
 }

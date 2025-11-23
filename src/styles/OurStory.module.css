@@ -75,3 +75,15 @@
     color: #c7a96e;
     font-style: normal;
 }
+
+.storyImage {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.storyImage img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto; /* keeps natural aspect ratio */
+}

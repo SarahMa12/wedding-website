@@ -20,7 +20,7 @@ const faqs = [
     },
     {
         question: "When should we arrive at the venue?",
-        answer: "The ceremony will strictly start at 5:00 PM. Please arrive to the venue at 4:00 PM to valet and find your seat.",
+        answer: "The ceremony will strictly start at 5:00 PM. Please arrive to the venue by 4:30 PM to enjoy pre-ceremony welcome drinks.",
     },
     {
         question: "When can we leave?",
@@ -52,7 +52,6 @@ export default function FAQ() {
 
     return (
         <div className="body-container">
-            <div className="title">FAQ</div>
             <div className={styles.faq}>
                 {faqs.map((faq, index) => (
                     <div className={styles.card} key={index}>
