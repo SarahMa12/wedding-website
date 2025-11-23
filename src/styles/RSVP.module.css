@@ -1,31 +1,71 @@
-.formQuestion {
-    display: flex;
-    flex-direction: column;
+.body-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* HERO WRAPPER */
+.heroWrapper {
+  width: 100vw;
+  height: 100vh; /* full viewport */
+  position: relative;
+  overflow: hidden;
+}
+
+/* HERO CARD – centered over image */
+.heroCard {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  width: min(90%, 600px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10; /* make sure card is on top */
+}
+
+/* FORM STYLING */
 .rsvpForm {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .sectionHeader {
-    font-size: 1.5rem;
-    font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.formQuestion {
+  display: flex;
+  flex-direction: column;
 }
 
 .formQuestion textarea {
   resize: none;
 }
 
-.formGroup {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.note {
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-.note {
-    display: flex;
-    justify-content: center;
-    font-size: 1.5rem;
+/* RESPONSIVE */
+@media (min-width: 1200px) {
+  .heroWrapper {
+    height: 100vh;
+  }
 }
