@@ -17,22 +17,22 @@ export default function Travel() {
         {
             name: "The Westin San Jose",
             desc: "A historic and elegant hotel in downtown San Jose with modern rooms and easy access to restaurants and nightlife. About 20 minutes from the venue.",
-            link: "https://www.marriott.com/en-us/hotels/sjcwi-the-westin-san-jose/overview/",
+            link: "https://www.marriott.com/en-us/hotels/sjcwi-the-westin-san-jose/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
         },
         {
             name: "Signia by Hilton San Jose",
             desc: "Upscale high-rise hotel with spacious rooms, a beautiful lobby, and central downtown location. About 20 minutes from the venue.",
-            link: "https://www.hilton.com/en/hotels/sjcsahh-signia-san-jose/",
+            link: "https://www.hilton.com/en/hotels/sjcsmsa-signia-san-jose/",
         },
         {
             name: "AC Hotel by Marriott San Jose Downtown",
             desc: "Chic, minimalist, European-inspired hotel with a clean aesthetic and great bar/lounge area. About 22 minutes from the venue.",
-            link: "https://www.marriott.com/en-us/hotels/sjcac-ac-hotel-san-jose-downtown/overview/",
+            link: "https://www.marriott.com/en-us/hotels/sjcac-ac-hotel-san-jose-downtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
         },
         {
             name: "Hyatt Place San Jose / Downtown",
             desc: "Comfortable and reliable stay right next to the convention center — great for families or groups. About 22 minutes from the venue.",
-            link: "https://www.hyatt.com/en-US/hotel/california/hyatt-place-san-jose-downtown/sjczd",
+            link: "https://www.hyatt.com/hyatt-place/en-US/sjczj-hyatt-place-san-jose-downtown",
         },
         {
             name: "Holiday Inn Express & Suites San Jose Silicon Valley by IHG",

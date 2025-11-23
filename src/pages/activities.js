@@ -32,9 +32,7 @@ export default function Activities() {
                   <span className={styles.memoryTag}>First date (her version)</span>
                 </div>
                 <p className={styles.itemDesc}>
-                  A dramatic cliffside ruin with ocean views and coastal trails.
-                  It’s the perfect place to stroll, explore lookout points, and
-                  watch a breathtaking sunset over the Pacific.
+                  A dramatic cliffside ruin with ocean views and coastal trails.  It’s the perfect place for guests to stroll, explore the lookout points, and watch a breathtaking sunset over the Pacific.
                 </p>
               </article>
 
@@ -44,8 +42,7 @@ export default function Activities() {
                   <span className={styles.memoryTag}>First date (his version)</span>
                 </div>
                 <p className={styles.itemDesc}>
-                  A hidden gem surrounded by towering eucalyptus trees — calm,
-                  green, and tucked away from the city bustle.
+                  A hidden gem surrounded by towering eucalyptus trees. 
                 </p>
               </article>
 
@@ -104,16 +101,14 @@ export default function Activities() {
               <article className={styles.itemCard}>
                 <div className={styles.itemName}>Mama&apos;s on Washington Square</div>
                 <p className={styles.itemDesc}>
-                  A classic SF brunch institution with huge portions and a loyal
-                  fanbase. Go early or plan for a line.
+                  A classic SF brunch institution with huge portions and a loyal fanbase. Go early or expect a line!
                 </p>
               </article>
 
               <article className={styles.itemCard}>
                 <div className={styles.itemName}>Liguria Bakery</div>
                 <p className={styles.itemDesc}>
-                  A true SF icon serving freshly baked focaccia since 1911. Cash
-                  only and it sells out quickly — go in the morning if you can.
+                  A true SF icon serving freshly baked focaccia since 1911. Cash only and sells out quickly.
                 </p>
               </article>
             </div>
@@ -135,16 +130,14 @@ export default function Activities() {
               <article className={styles.itemCard}>
                 <div className={styles.itemName}>Santana Row</div>
                 <p className={styles.itemDesc}>
-                  A vibrant outdoor shopping district with restaurants, coffee
-                  shops, and boutiques. Great for wandering around before or after
-                  meals.
+                  A vibrant outdoor shopping district with restaurants, coffee shops, and boutiques. Great for wandering around before or after meals.
                 </p>
               </article>
 
               <article className={styles.itemCard}>
                 <div className={styles.itemName}>Alum Rock Park</div>
                 <p className={styles.itemDesc}>
-                  One of California’s oldest municipal parks — peaceful hiking,
+                  One of California&apos;s oldest municipal parks — peaceful hiking,
                   scenic overlooks, and lush greenery just minutes from the venue.
                 </p>
               </article>
@@ -154,8 +147,7 @@ export default function Activities() {
                   Downtown San Jose (San Pedro Square)
                 </div>
                 <p className={styles.itemDesc}>
-                  Museums, bars, cafés, and walkable plazas — an easy way to spend
-                  an afternoon exploring and grabbing drinks or bites.
+                  Museums, bars, cafés, and walkable plazas - an easy way to spend an afternoon exploring.
                 </p>
               </article>
             </div>
@@ -175,8 +167,7 @@ export default function Activities() {
               <article className={styles.itemCard}>
                 <div className={styles.itemName}>Ramen Nagi (Valley Fair)</div>
                 <p className={styles.itemDesc}>
-                  Full-flavor, customizable ramen bowls from the famous Japanese
-                  brand. One of the best ramen experiences in the Bay Area.
+                  Full-flavor, customizable ramen bowls from the famous Japanese brand. A top ramen experience in the Bay Area.
                 </p>
               </article>
 
