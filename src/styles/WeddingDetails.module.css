@@ -1,14 +1,21 @@
-/* General body container tweaks */
-.body-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+/* Outer page wrapper */
+.detailsPage {
+    width: 100%;
+    background-color: #fefcf6;
 }
 
-/* Page header (new) */
+/* Inner centered column */
+.detailsInner {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Page header */
 .pageHeader {
     max-width: 900px;
     margin: 0 auto 1.5rem;
@@ -38,12 +45,11 @@
     overflow: hidden;
     border-top-left-radius: 50% 50%;
     border-top-right-radius: 50% 50%;
-    margin-bottom: 2rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 
-    max-width: 900px;    /* ⭐ matching card width */
+    max-width: 900px;
     margin-left: auto;
-    margin-right: auto;  /* ⭐ centers it perfectly */
+    margin-right: auto;
 }
 
 .topImageWrapper img {
@@ -57,7 +63,7 @@
     transform: scale(1.05);
 }
 
-/* Big Event card styling */
+/* Big Event card */
 .bigEvent {
     display: flex;
     flex-direction: row;
@@ -70,28 +76,17 @@
     gap: 2rem;
     transition: transform 0.3s ease;
 
-    max-width: 900px;   /* ✔ keeps cards even on large screens */
-    margin: 0 auto;     /* ✔ centers them */
-    align-items: stretch; /* ✔ equal height columns */
-}
-
-.info,
-.schedule {
-    height: auto;
-    align-self: stretch;
-}
-
-.schedule {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* makes content hug the top */
+    max-width: 900px;
+    width: 100%;       /* 👈 makes all three uniform in width, even on phone */
+    margin: 0 auto;
+    align-items: stretch;
 }
 
 .bigEvent:hover {
     transform: translateY(-5px);
 }
 
-/* Info Section */
+/* Left side: text info */
 .info {
     flex: 1 1 300px;
     display: flex;
@@ -139,7 +134,7 @@
 
 .weddingLocationText {
     display: inline-block;
-    line-height: 1.7;      /* ensures no extra spacing */
+    line-height: 1.7;
 }
 
 .locationIcon {
@@ -160,7 +155,7 @@
     color: #555;
 }
 
-/* Schedule Section */
+/* Right side: schedule box */
 .schedule {
     flex: 1 1 250px;
     display: flex;
@@ -180,12 +175,13 @@
     text-align: center;
 }
 
+/* For TBA blocks */
 .event {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem 2rem; /* vertical gap 1rem, horizontal 2rem */
+    font-size: 1rem;
+    text-align: center;
 }
 
+/* Detailed schedule (wedding day) */
 .eventGrid {
     display: flex;
     flex-direction: column;
@@ -194,20 +190,19 @@
 
 .eventRow {
     display: grid;
-    grid-template-columns: 90px 1fr;   /* more width for the time */
+    grid-template-columns: 90px 1fr;
     align-items: center;
     gap: 1rem;
 }
 
 .time {
     font-weight: 600;
-    white-space: nowrap;                /* prevents wrapping */
+    white-space: nowrap;
 }
 
 .eventLabel {
     font-size: 1rem;
 }
-
 
 /* Responsive tweaks */
 @media (max-width: 900px) {
@@ -218,20 +213,41 @@
     .schedule {
         width: 100%;
     }
-
-    .event {
-        grid-template-columns: 1fr; /* stack vertically on smaller screens */
-    }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+    .detailsInner {
+        padding: 2.5rem 1.25rem 3rem;
+        gap: 2.5rem;
+    }
+
+    .bigEvent {
+        padding: 1.75rem 1.5rem;
+    }
+
     .sectionTitle {
         font-size: 1.5rem;
+    }
+
+    .word {
+        font-size: 1.8rem;
     }
 
     .letter {
         font-size: 1.8rem;
     }
+
+    .topImageWrapper {
+        height: 260px;
+    }
 }
 
-/* (You had duplicate media queries — removed the extra copy) */
+@media (max-width: 480px) {
+    .detailsInner {
+        padding: 2rem 1rem 2.5rem;
+    }
+
+    .bigEvent {
+        padding: 1.5rem 1.25rem;
+    }
+}
