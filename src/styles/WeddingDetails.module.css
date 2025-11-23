@@ -8,6 +8,28 @@
     gap: 4rem;
 }
 
+/* Page header (new) */
+.pageHeader {
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+}
+
+.pageTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    color: #c7a96e;
+}
+
+.pageSubheading {
+    max-width: 640px;
+    margin: 0 auto;
+    color: #555;
+}
+
 /* Top half-circle image */
 .topImageWrapper {
     position: relative;
@@ -212,24 +234,4 @@
     }
 }
 
-
-/* Responsive tweaks */
-@media (max-width: 900px) {
-    .bigEvent {
-        flex-direction: column;
-    }
-
-    .schedule {
-        width: 100%;
-    }
-}
-
-@media (max-width: 500px) {
-    .sectionTitle {
-        font-size: 1.5rem;
-    }
-
-    .letter {
-        font-size: 1.8rem;
-    }
-}
+/* (You had duplicate media queries — removed the extra copy) */

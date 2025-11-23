@@ -1,42 +1,118 @@
+/* Full-width soft background like Travel */
+.weddingPartyPage {
+  width: 100%;
+  background: radial-gradient(circle at top, #fdf7ec 0, #ffffff 55%);
+}
+
+/* Inner constrained container, piggybacking on body-container */
+.weddingPartyInner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Page header */
+.pageHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  color: #c7a96e;
+}
+
+.pageSubheading {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* People grid */
 .people {
-    display: flex;
-    justify-content: center;
-    gap: clamp(2rem, 10vw, 4rem);
-    flex-wrap: wrap;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 2rem 1.75rem;
+  justify-items: center;
 }
 
-.person img {
-    width: 190px;           /* or whatever fixed size you want */
-    height: 190px;
-    border-radius: 50%;     /* keeps it circular */
-    object-fit: cover;      /* ensures image fills the circle without stretching */
-    overflow: hidden;       /* hide any overflow (mostly for safety) */
-    display: block;
-}
-
+/* Each person card */
 .person {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.2rem;
+  width: 100%;
+  max-width: 220px;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.25rem 1rem 1.4rem;
+  border: 1px solid rgba(199, 169, 110, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
+.person:hover {
+  transform: translateY(-4px);
+  border-color: rgba(199, 169, 110, 0.45);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  background: #fffdf8;
+}
+
+/* Avatar */
+.avatarWrapper {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text */
 .name {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-top: 0.5rem;
-    color: #c7a96e;
-    letter-spacing: 1px;
-    margin-bottom: 2px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+  color: #c7a96e;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-.heading {
-    text-align: center;
-    font-size: 1.4rem;
-    margin-top: 1rem;
+.role {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+  color: #333;
 }
 
 .relationship {
-    font-style: italic;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #666;
+}
+
+/* Responsive tweaks */
+@media (min-width: 768px) {
+  .pageTitle {
+    font-size: 2.2rem;
+  }
+
+  .people {
+    gap: 2.5rem 2rem;
+  }
 }

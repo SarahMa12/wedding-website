@@ -15,6 +15,7 @@ export default function Navbar() {
         { href: "/wedding-party", label: "Wedding Party" },
         { href: "/our-story", label: "Our Story" },
         { href: "/travel", label: "Travel" },
+        { href: "/activities", label: "Activities" },
         { href: "/registry", label: "Registry" },
         { href: "/faq", label: "FAQ" },
     ];

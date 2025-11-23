@@ -1,14 +1,15 @@
 import styles from "@/styles/Travel.module.css";
+import Image from "next/image";
 
 export default function Travel() {
     const flights = [
         {
             name: "San Jose Mineta International Airport (SJC)",
-            miles: "Approximately 11 miles from venue",
+            miles: "Approximately 11 miles from the venue",
         },
         {
             name: "San Francisco International Airport (SFO)",
-            miles: "Approximately 42 miles from venue",
+            miles: "Approximately 42 miles from the venue",
         },
     ];
 
@@ -25,7 +26,7 @@ export default function Travel() {
         },
         {
             name: "AC Hotel by Marriott San Jose Downtown",
-            desc: "Chic and minimalist European-inspired hotel with a clean aesthetic and great bar/lounge area. About 22 minutes from the venue.",
+            desc: "Chic, minimalist, European-inspired hotel with a clean aesthetic and great bar/lounge area. About 22 minutes from the venue.",
             link: "https://www.marriott.com/en-us/hotels/sjcac-ac-hotel-san-jose-downtown/overview/",
         },
         {
@@ -35,71 +36,140 @@ export default function Travel() {
         },
         {
             name: "Holiday Inn Express & Suites San Jose Silicon Valley by IHG",
-            desc: "Comfortable, modern rooms just minutes from SJC, making it convenient for travels. About 20 minutes from the venue.",
+            desc: "Comfortable, modern rooms just minutes from SJC, making it convenient for travelers. About 20 minutes from the venue.",
             link: "https://www.ihg.com/holidayinnexpress/hotels/us/en/san-jose/sjces/hoteldetail",
-        }
+        },
     ];
 
-
     return (
-        <div className="body-container">
-            
-            {/* Flights Section */}
-            <div className={styles.section}>
-                <div className={styles.header}>Flights</div>
+        <div className={styles.travelPage}>
+            <div className={`body-container ${styles.travelInner}`}>
+                
+                {/* Page Header */}
+                <header className={styles.pageHeader}>
+                    <h1 className={styles.pageTitle}>Travel &amp; Stay</h1>
+                    <p className={styles.pageSubheading}>
+                        Our ceremony and reception will be in the east hills of San Jose.
+                        Below are nearby airports, hotel recommendations, and tips for getting to the venue.
+                    </p>
+                </header>
 
-                {flights.map((airport, idx) => (
-                    <div className={styles.airport} key={idx}>
-                        <div className={styles.airportName}>{airport.name}</div>
-                        <div className={styles.miles}>{airport.miles}</div>
+                {/* Flights Section */}
+                <section className={styles.section}>
+                    <div className={styles.sectionHeaderRow}>
+                        <div className={styles.sectionTitleGroup}>
+                            <span className={styles.sectionIcon}>
+                                <Image src="/images/airplane.svg" width={25} height={25} alt="Airplane" />
+                            </span>
+                            <h2 className={styles.header}>Flights</h2>
+                        </div>
+                        <span className={styles.sectionTag}>Nearest Airports</span>
                     </div>
-                ))}
-            </div>
 
-            {/* Hotels Section */}
-            <div className={styles.section}>
-                <div className={styles.header}>Hotel</div>
+                    <div className={styles.flightsGrid}>
+                        {flights.map((airport, idx) => (
+                            <article className={styles.airportCard} key={idx}>
+                                <div className={styles.airportName}>{airport.name}</div>
+                                <div className={styles.miles}>{airport.miles}</div>
+                            </article>
+                        ))}
+                    </div>
+                </section>
 
-                {hotels.map((hotel, idx) => (
-                    <div className={styles.hotel} key={idx}>
-                        <a 
-                            href={hotel.link} 
-                            target="_blank" 
+                {/* Hotels Section */}
+                <section className={styles.section}>
+                    <div className={styles.sectionHeaderRow}>
+                        <div className={styles.sectionTitleGroup}>
+                            <span className={styles.sectionIcon}>
+                                <Image src="/images/hotel.svg" width={25} height={25} alt="Hotel" />
+                            </span>
+                            <h2 className={styles.header}>Hotels</h2>
+                        </div>
+                        <span className={styles.sectionTag}>Downtown San Jose</span>
+                    </div>
+
+                    <div className={styles.hotelsGrid}>
+                        {hotels.map((hotel, idx) => (
+                            <a
+                                href={hotel.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.hotelCard}
+                                key={idx}
+                            >
+                                <div className={styles.hotelName}>{hotel.name}</div>
+                                <p className={styles.hotelDesc}>{hotel.desc}</p>
+                            </a>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Airbnb Section */}
+                <section className={styles.section}>
+                    <div className={styles.sectionHeaderRow}>
+                        <div className={styles.sectionTitleGroup}>
+                            <span className={styles.sectionIcon}>
+                                <Image src="/images/house.svg" width={25} height={25} alt="House" />
+                            </span>
+                            <h2 className={styles.header}>Airbnb</h2>
+                        </div>
+                        <span className={styles.sectionTag}>Homes &amp; Group Stays</span>
+                    </div>
+
+                    <p className={styles.airbnb}>
+                        Airbnb options are plentiful in San Jose, offering cozy homes and modern stays
+                        around 15–20 minutes from the venue — perfect for groups, families, or anyone
+                        who prefers more space and flexibility.
+                    </p>
+
+                    <div className={styles.linkRow}>
+                        <a
+                            href="https://www.airbnb.com/s/San-Jose--CA/homes?checkin=2026-09-11&checkout=2026-09-13"
+                            target="_blank"
                             rel="noopener noreferrer"
-                            className={styles.hotelName}
+                            className={styles.primaryLink}
                         >
-                            {hotel.name}
+                            View Airbnb stays near the venue
                         </a>
-
-                        <div className={styles.hotelDesc}>{hotel.desc}</div>
                     </div>
-                ))}
+                </section>
+
+                {/* Rides Section */}
+                <section className={styles.section}>
+                    <div className={styles.sectionHeaderRow}>
+                        <div className={styles.sectionTitleGroup}>
+                            <span className={styles.sectionIcon}>
+                                <Image src="/images/car.svg" width={25} height={25} alt="Car" />
+                            </span>
+                            <h2 className={styles.header}>Getting to the Venue</h2>
+                        </div>
+                        <span className={styles.sectionTag}>Rides &amp; Parking</span>
+                    </div>
+
+                    <div className={styles.ridesGrid}>
+                        <div className={styles.rideBlock}>
+                            <h3 className={styles.subheader}>Cars</h3>
+                            <p className={styles.cars}>
+                                You’re welcome to rent a car to explore the Bay Area, but there is no parking on site.
+                                We highly recommend using the provided rideshare code.
+                            </p>
+                            <p className={styles.cars}>
+                                If you prefer to park nearby, you may park at{" "}
+                                <strong>3311 Arqueado Drive, San Jose, CA 95148</strong>.
+                            </p>
+                        </div>
+
+                        <div className={styles.rideBlock}>
+                            <h3 className={styles.subheader}>Uber</h3>
+                            <p className={styles.cars}>
+                                We’ll provide an Uber code for round-trip rides to and from the venue.
+                                Details will be shared closer to the date.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
             </div>
-
-            <div className={styles.section}>
-                <div className={styles.header}>Airbnb</div>
-                <div className={styles.airbnb}>Airbnb options are plentiful in San Jose, offering cozy homes and modern stays just 15-20 minutes from the venue for guests who prefer more space and flexibility.</div>
-                <div className={styles.link}>
-                    <a 
-                        href={'https://www.airbnb.com/s/San-Jose--CA/homes?refinement_paths%5B%5D=%2Fhomes&place_id=ChIJ9T_5iuTKj4ARe3GfygqMnbk&acp_id=2c574597-300a-4718-b084-79f687c209f4&date_picker_type=calendar&flexible_trip_dates%5B%5D=september&search_type=user_map_move&query=San%20Jose%2C%20CA&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2025-12-01&monthly_length=3&monthly_end_date=2026-03-01&search_mode=regular_search&price_filter_input_type=2&channel=EXPLORE&ne_lat=37.50895024525264&ne_lng=-121.73981451206873&sw_lat=37.18292258530377&sw_lng=-121.97424396092754&zoom=11.402277412647743&zoom_level=11.402277412647743&search_by_map=true&price_filter_num_nights=2&checkin=2026-09-11&checkout=2026-09-13&source=structured_search_input_header'} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className={styles.hotelName}
-                    > 
-                        View Airbnb Stays Near Venue
-                    </a>
-
-                </div>
-            </div>
-
-            <div className={styles.section}>
-                <div className={styles.header}>Rides</div>
-            </div>
-
-            <div className={styles.section}>
-                <div className={styles.header}>Activities</div>
-            </div>
-
         </div>
     );
 }
