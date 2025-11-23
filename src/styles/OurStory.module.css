@@ -74,24 +74,13 @@
   gap: 1.25rem;
 }
 
-.storySection:first-of-type {
-  padding-bottom: 5rem;
-}
-
 .storySection p {
   margin: 0;
 }
 
-.storySection p:last-of-type {
-  padding-bottom: 1rem;
-}
-
-
-
 /* Image area */
 .storyImageCard {
   margin-top: 1.5rem;
-  margin: -5rem;
   display: flex;
 }
 
