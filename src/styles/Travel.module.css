@@ -1,7 +1,7 @@
 /* Full-width gradient background */
 .travelPage {
     width: 100%;
-    background: radial-gradient(circle at top, #fdf7ec 0, #ffffff 55%);
+    background: #fefcf6;
 }
 
 /* Inner container */
@@ -99,18 +99,23 @@
 }
 
 /* Flights */
+/* Flights */
 .flightsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
+/* Each airport card will behave like a responsive tile */
 .airportCard {
+    flex: 1 1 260px;         /* base width ~260px, can grow */
+    max-width: 100%;         /* don’t blow past container */
     padding: 1rem;
     border-radius: 0.8rem;
     border: 1px dashed rgba(199, 169, 110, 0.35);
     background: linear-gradient(135deg, #fffdf8 0%, #ffffff 65%);
 }
+
 
 .airportName {
     font-size: 1rem;
@@ -124,6 +129,7 @@
     opacity: 0.8;
     color: #666;
 }
+
 
 /* Hotels */
 .hotelsGrid {

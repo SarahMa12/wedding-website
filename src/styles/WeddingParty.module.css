@@ -1,7 +1,7 @@
 /* Full-width soft background like Travel */
 .weddingPartyPage {
   width: 100%;
-  background: radial-gradient(circle at top, #fdf7ec 0, #ffffff 55%);
+  background: #fefcf6;
 }
 
 /* Inner constrained container, piggybacking on body-container */
@@ -36,16 +36,17 @@
 
 /* People grid */
 .people {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem 1.75rem;
-  justify-items: center;
+  justify-content: center;
 }
 
 /* Each person card */
 .person {
+  flex: 1 1 220px;
   width: 100%;
-  max-width: 220px;
+  max-width: 260px;
   background: #ffffff;
   border-radius: 1rem;
   padding: 1.25rem 1rem 1.4rem;
