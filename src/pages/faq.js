@@ -4,7 +4,7 @@ import styles from "@/styles/FAQ.module.css";
 const faqs = [
     {
         question: "Can I bring a guest / date?",
-        answer: "If you received a plus one, your guest's name is listed on your invitation and will appear under your name when you RSVP. Otherwise, we would love to keep the wedding as an intimate event with family and close friends. Thank you for understanding!",
+        answer: "If you received a plus one, your guest's name is listed on your invitation and will need to be entered when you RSVP. We would love to keep the wedding as an intimate event with family and close friends. Thank you for understanding!",
     },
     {
         question: "Are kids invited?",
@@ -16,19 +16,19 @@ const faqs = [
     },
     {
         question: "What if I did not RSVP but will attend the wedding?",
-        answer: "No RSVP = No Seat. We will assign your seats so we strongly suggest you do the RSVP on or before August 1, 2026 or you may contact and inform us ahead of time. In any case that you may have said Yes in our RSVP and suddenly won't be able to attend, please let us know ASAP so we can accomodate any changes.",
+        answer: "No RSVP = No Seat. We will assign your seats so we strongly suggest you do the RSVP on or before July 15, 2026 or you may contact and inform us ahead of time. In any case that you may have said 'Yes' in our RSVP and suddenly won't be able to attend, please let us know ASAP so we can accomodate any changes.",
     },
     {
         question: "When should we arrive at the venue?",
-        answer: "The ceremony will strictly start at 5:00 PM. Please arrive to the venue by 4:30 PM to enjoy pre-ceremony welcome drinks.",
+        answer: "The ceremony will strictly start at 5:00 PM. Please arrive to the venue by 4:30 to enjoy pre-ceremony welcome drinks and mingle.",
     },
     {
         question: "When can we leave?",
-        answer: "The program is estimated to last until 10:00 PM. We are hoping that you will stay with us until the end of the program. Should you wish to leave early, we'd love to personally thank you and say goodbye before you go",
+        answer: "The program is estimated to last until 10:00 PM. We are hoping that you will stay with us until the end of the program.",
     },
     {
         question: "Is there a dress code?",
-        answer: "Dress to impress! Our wedding is formal, so feel free to wear your best outfit and be prepared to celebrate with us.",
+        answer: "Dress to impress! Our wedding is formal, so feel free to wear your best outfit and be prepared to celebrate with us. Plan for floor-length elegance, elevated eveningwear, and classic suits or tuxes; kindly avoid cocktail dresses or casual outfits. As it’s an outdoor celebration, a light shawl or cardigan is recommended for the evening breeze.",
     },
     {
         question: "Where should I stay?",
