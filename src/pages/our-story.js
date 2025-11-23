@@ -11,35 +11,27 @@ export default function OurStory() {
           <span className={styles.word}><span className={styles.letter}>S</span>ide</span>
         </div>
         <p>
-          We met in January 2018 during our Business Information Systems class at SF State. 
-          We ended up in the same project group for the semester, which meant weekly meetings, 
-          shared deadlines, and a lot of time together. After our final exam, we were chatting 
-          in the hallway before parting ways. A few minutes later, he called and asked if I 
-          wanted to go to the mall with him while he picked out an engagement gift for his 
-          brother and sister-in-law. That spontaneous moment led to everything that came after.
+          We met in January 2018 in our Business Information Systems class at SF State. I thought he was handsome, sweet, and had this calm presence that made him stand out. It was the type of quiet crush you keep to yourself and tell your best friends about, never imagining anything would actually happen.
         </p>
         <p>
-          Our first date took us to the Cliff House in San Francisco. We hiked all the way down 
-          to the beach, sat at the bottom of the cliffs, and watched the sun set over the ocean. 
-          It felt peaceful, natural, and strangely familiar, like we had known each other far longer than a semester.
+          After our final exam, we said a quick goodbye in the hallway and started heading to our cars. A few minutes later, my phone rang. It was him, asking if I wanted to go to the mall with him while he picked out an engagement gift for his brother. I still remember the little shock I felt, followed by the “OMG wait what” texts and calls to my best friends. That tiny, unexpected call became the moment everything shifted.
         </p>
         <p>
-          I realized he was the one during our first long weekend trip to Disneyland in August 2018. 
-          Traveling with him felt effortless. I was relaxed, happy, and completely myself. Every trip 
-          after that only deepened that feeling. And when he loved Koko instantly, and embraced all of 
-          his Coco-Loco sweetness, my heart pretty much melted.
+          Our first real date was at the Sutro Baths in San Francisco. We hiked down by the ocean and sat together as the sun dipped into the horizon. Being with him felt peaceful and strangely familiar, even though we were only at the beginning.
         </p>
         <p>
-          The proposal took place at Lake Como in Italy, right by the water. We took a private boat out 
-          early in the morning, and he proposed at Villa Balbiano, the iconic location where Padmé and 
-          Anakin’s wedding scene was filmed. I was overwhelmed with joy, gratitude, and love. It was perfect in every way.
+          I realized he was the one during our first trip to Disneyland. Traveling together felt so effortless and joyful. He made even the simplest moments feel fun and comfortable. Every trip after that just confirmed what my heart already knew. And when he instantly loved Koko, quirks and all, my heart practically melted.
+        </p>
+        <p>
+          The proposal happened on the most beautiful morning in Lake Como. We were on a private boat gliding across the water when he asked me to marry him at Villa Balbiano, the breathtaking place where Padmé and Anakin were married in Star Wars. I was overwhelmed with love, joy, and disbelief at how perfect the moment felt. It was everything I could have dreamed of.
         </p>
         <div className={styles.storyImageCard}>
           <Image
             src="/images/her-story.PNG"
             alt="Her story image"
-            fill
-            style={{ objectFit: "cover", borderRadius: "12px" }}
+            width={900}       // or use the max width of your container
+            height={506}      // keep aspect ratio
+            style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
           />
         </div>
       </section>
@@ -71,8 +63,9 @@ export default function OurStory() {
           <Image
             src="/images/his-story.PNG"
             alt="His story image"
-            fill
-            style={{ objectFit: "cover", borderRadius: "12px" }}
+            width={900}       // or use the max width of your container
+            height={506}      // keep aspect ratio
+            style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
           />
         </div>
       </section>
