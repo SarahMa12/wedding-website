@@ -1,33 +1,49 @@
-.body-container {
+/* Full-page wrapper */
+.storyPage {
+  width: 100%;
+  background-color: #fefcf6; /* matches your other pages */
+  display: flex;
+  flex-direction: center;
+}
+
+/* Inner centered column */
+.storyInner {
   max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 3rem;
   line-height: 1.7;
   color: #333;
+  font-size: 1rem;
 }
 
+/* Each side's card */
 .storySection {
-  font-size: 1.1rem;
-  background: #ffffff;
+  font-size: 1.05rem;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
+  width: 100%;
   max-width: 872px;
+  margin: 0 auto;
 }
 
+/* Title: "Her Story" / "His Story" */
 .sectionTitle {
-  font-family: 'Amoresa', cursive;
+  font-family: "Amoresa", cursive;
   font-size: 2rem;
   color: #c7a96e;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: center;
   display: flex;
+  justify-content: center;
   gap: 12px;
   font-weight: 700;
   flex-wrap: wrap;
@@ -40,43 +56,71 @@
   color: #c7a96e;
   font-weight: 700;
   flex-wrap: wrap;
-  font-family: 'Amoresa', cursive;
+  font-family: "Amoresa", cursive;
 }
 
 .letter {
-  font-family: 'Amoresa', cursive;
+  font-family: "Amoresa", cursive;
   font-size: 2rem;
   font-weight: 700;
   color: #c7a96e;
   font-style: normal;
 }
 
+/* Story text block */
+.story {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+
 .storySection p {
   margin: 0;
 }
 
+.storySection p:last-of-type {
+  padding-bottom: 1rem;
+}
+
+
+/* Image area */
 .storyImageCard {
+  margin-top: 1.5rem;
   margin: -5rem;
+  padding-bottom: 2rem;
   display: flex;
 }
 
-.storySection:first-of-type .storyImageCard {
-  padding-bottom: 30px;
-}
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .storyInner {
+    padding: 2.5rem 1.25rem 3rem;
+  }
 
-.storySection p:last-of-type {
-  margin-bottom: 2rem; 
-}
+  .storySection {
+    padding: 1.75rem 1.5rem;
+  }
 
-@media (max-width: 600px) {
   .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .word {
     font-size: 1.6rem;
+  }
+
+  .letter {
+    font-size: 1.8rem;
   }
 }
 
-.story {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+@media (max-width: 480px) {
+  .storySection {
+    padding: 1.5rem 1.25rem;
+  }
 
+  .storyInner {
+    padding: 2rem 1rem 2.5rem;
+  }
+}
