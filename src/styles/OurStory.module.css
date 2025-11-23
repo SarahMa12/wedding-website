@@ -1,4 +1,11 @@
-
+.body-container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  line-height: 1.7;
+  color: #333;
+}
 
 .storySection {
   font-size: 1.1rem;
