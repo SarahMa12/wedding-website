@@ -29,7 +29,7 @@ export default function OurStory() {
         </div>
         <div className={styles.storyImageCard}>
           <Image
-            src="/images/her-story.png"
+            src="/images/her-story.PNG"
             alt="Her story image"
             width={900}       // or use the max width of your container
             height={506}      // keep aspect ratio
@@ -66,7 +66,7 @@ export default function OurStory() {
         </div>
         <div className={styles.storyImageCard}>
           <Image
-            src="/images/his-story.png"
+            src="/images/his-story.PNG"
             alt="Her story image"
             width={900}       // or use the max width of your container
             height={506}      // keep aspect ratio
