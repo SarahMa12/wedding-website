@@ -1,71 +1,239 @@
-.body-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.rsvpPage {
+  width: 100%;
+  background-color: #fefcf6;
 }
 
-/* HERO WRAPPER */
+/* SECTION WRAPPER */
 .heroWrapper {
-  width: 100vw;
-  height: calc(100vh - 100px);  /* full screen minus navbar */
   position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px); /* room for navbar, grows with content */
+  padding: 4rem 1.5rem 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Background image layer */
+.heroImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   overflow: hidden;
 }
 
-/* HERO CARD – centered over image */
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Foreground card */
 .heroCard {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  padding: 2rem 2.5rem;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  padding: 2.2rem 2.6rem;
   border-radius: 20px;
-  width: min(90%, 600px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: min(90%, 640px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  z-index: 10; /* make sure card is on top */
+  align-items: stretch;
+}
+
+/* Title + subheading */
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #c7a96e;
+  margin-bottom: 0.5rem;
+}
+
+.pageSubheading {
+  font-size: 1rem;
+  text-align: center;
+  color: #555;
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
 }
 
 /* FORM STYLING */
 .rsvpForm {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.6rem;
   width: 100%;
 }
 
 .formGroup {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.55rem;
 }
 
 .sectionHeader {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #c7a96e;
+  margin-bottom: 0.25rem;
 }
 
 .formQuestion {
   display: flex;
   flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.formQuestion label {
+  font-size: 0.95rem;
+}
+
+.formQuestion input[type="text"],
+.formQuestion select,
+.formQuestion textarea {
+  margin-top: 0.2rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 0.95rem;
+  outline: none;
+  background-color: #fffdf8;
 }
 
 .formQuestion textarea {
   resize: none;
+  min-height: 70px;
 }
 
-.note {
-  font-size: 1.5rem;
-  text-align: center;
+.formQuestion input[type="radio"] {
+  margin-right: 0.35rem;
+}
+
+/* Helper text under guests count */
+.helperText {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 0.15rem;
+}
+
+/* Guest list rows */
+.guestList {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.guestRow {
+  padding: 0.75rem 0.75rem 0.9rem;
+  border-radius: 10px;
+  background: rgba(255, 253, 248, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.guestRowHeader {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #4a3b1c;
+}
+
+/* Layout for name + meal side by side on larger screens */
+.twoColumnRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 600px) {
+  .twoColumnRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Submit button */
+.submitButton {
+  align-self: center;
+  margin-top: 0.5rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid #c7a96e;
+  background: #fdf7ec;
+  color: #4a3b1c;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+
+.submitButton:hover {
+  background: #c7a96e;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  transform: translateY(-1px);
 }
 
 /* RESPONSIVE */
-@media (min-width: 1200px) {
+@media (max-width: 900px) {
   .heroWrapper {
-    height: 100vh;
+    padding: 3.5rem 1.5rem 4rem;
+    align-items: flex-start;
+  }
+
+  .heroCard {
+    width: min(92%, 620px);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroWrapper {
+    padding: 3rem 1.25rem 3.5rem;
+  }
+
+  .heroCard {
+    padding: 1.9rem 1.9rem;
+    width: min(94%, 540px);
+  }
+
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+
+  .pageSubheading {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroWrapper {
+    padding: 2.5rem 1rem 3rem;
+  }
+
+  .heroCard {
+    padding: 1.6rem 1.4rem;
+    width: 92%;
+  }
+
+  .pageTitle {
+    font-size: 1.6rem;
+  }
+
+  .pageSubheading {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
   }
 }
