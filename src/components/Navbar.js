@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -6,6 +6,7 @@ import styles from "@/styles/Navbar.module.css";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [hideOnScroll, setHideOnScroll] = useState(false);
     const router = useRouter();
 
     const navLinks = [
@@ -20,15 +21,52 @@ export default function Navbar() {
         { href: "/faq", label: "FAQ" },
     ];
 
+    // 👇 Hide navbar when scrolling down, show when scrolling up
+    useEffect(() => {
+        let lastScrollY = window.scrollY;
+
+        const handleScroll = () => {
+            const currentY = window.scrollY;
+
+            // Only start hiding after you've scrolled a bit
+            if (currentY > lastScrollY && currentY > 80) {
+                // scrolling down
+                setHideOnScroll(true);
+            } else {
+                // scrolling up
+                setHideOnScroll(false);
+            }
+
+            lastScrollY = currentY;
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // When mobile menu is open, force nav visible
+    const navClassName = `${styles.navBar} ${
+        hideOnScroll && !menuOpen ? styles.navHidden : ""
+    }`;
+
     return (
-        <nav className={styles.navBar}>
+        <nav className={navClassName}>
             <div className={styles.topNav}>
                 <Link href="/" legacyBehavior>
                     <a className={styles.logo}>Syrena and George</a>
                 </Link>
 
-                <button className={styles.navButton} onClick={() => setMenuOpen(true)}>
-                    <Image src="/images/nav-icon.svg" width="25" height="25" />
+                <button
+                    className={styles.navButton}
+                    onClick={() => setMenuOpen(true)}
+                    aria-label="Open navigation menu"
+                >
+                    <Image
+                        src="/images/nav-icon.svg"
+                        width={25}
+                        height={25}
+                        alt="Open menu"
+                    />
                 </button>
             </div>
 
@@ -52,7 +90,11 @@ export default function Navbar() {
                                 <li key={link.href}>
                                     <Link href={link.href} legacyBehavior>
                                         <a
-                                            className={router.pathname === link.href ? styles.activeLink : ""}
+                                            className={
+                                                router.pathname === link.href
+                                                    ? styles.activeLink
+                                                    : ""
+                                            }
                                             onClick={() => setMenuOpen(false)}
                                         >
                                             {link.label}
@@ -61,8 +103,17 @@ export default function Navbar() {
                                 </li>
                             ))}
                         </ul>
-                        <button className={styles.closeButton} onClick={() => setMenuOpen(false)}>
-                            <Image src="/images/close-icon.svg" width="25" height="25" />
+                        <button
+                            className={styles.closeButton}
+                            onClick={() => setMenuOpen(false)}
+                            aria-label="Close navigation menu"
+                        >
+                            <Image
+                                src="/images/close-icon.svg"
+                                width={25}
+                                height={25}
+                                alt="Close menu"
+                            />
                         </button>
                     </div>
                 </div>

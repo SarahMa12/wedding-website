@@ -14,7 +14,17 @@
     padding: 3rem 2rem 1rem;
     gap: 3rem;
     border-bottom: 1px solid #c7a96e;
-;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: #ffffff;
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navHidden {
+    transform: translateY(-100%);
 }
 
 .topNav {
