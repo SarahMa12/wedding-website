@@ -1,12 +1,17 @@
-export default function Registry() {
-    return (
-        <div className="body-container">
-            <div className="title">Registry</div>
+import styles from "@/styles/Registry.module.css";
 
-            <p className="registry-text">
-                We're putting together something meaningful for our registry.  
-                More information will be available soon. ♡
-            </p>
+export default function Registry() {
+  return (
+    <div className={styles.registryPage}>
+      <div className={styles.registryInner}>
+        <div className={styles.registryCard}>
+          <h1 className={styles.pageTitle}>Registry</h1>
+          <p className={styles.pageSubheading}>
+            We&apos;re putting together something meaningful for our registry.
+            More information will be available soon. ♡
+          </p>
         </div>
-    );
+      </div>
+    </div>
+  );
 }

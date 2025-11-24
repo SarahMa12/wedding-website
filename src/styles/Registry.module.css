@@ -1,0 +1,84 @@
+.registryPage {
+  width: 100%;
+  background-color: #fefcf6; /* same base as other pages */
+}
+
+/* Centered layout similar to RSVP but without hero image */
+.registryInner {
+  max-width: 900px;
+  width: 100%;
+  margin: -6rem auto;
+  min-height: 100vh; /* leave room for navbar */
+  padding: 4rem 1.5rem 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card like RSVP heroCard but on plain background */
+.registryCard {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.4rem 2.8rem;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Title styling to match RSVP/Wedding Details vibes */
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c7a96e;
+  margin-bottom: 0.75rem;
+}
+
+/* Soft, centered blurb */
+.pageSubheading {
+  font-size: 1rem;
+  color: #555;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .registryInner {
+    padding: 3rem 1.5rem 3.5rem;
+  }
+
+  .registryCard {
+    padding: 2rem 1.9rem;
+  }
+
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+
+  .pageSubheading {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .registryInner {
+    padding: 2.5rem 1rem 3rem;
+  }
+
+  .registryCard {
+    padding: 1.7rem 1.4rem;
+  }
+
+  .pageTitle {
+    font-size: 1.6rem;
+  }
+
+  .pageSubheading {
+    font-size: 0.9rem;
+  }
+}

@@ -7,7 +7,7 @@
 .heroWrapper {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 80px); /* room for navbar, grows with content */
+  min-height: calc(100vh - 100px); /* room for navbar, grows with content */
   padding: 4rem 1.5rem 4.5rem;
   display: flex;
   justify-content: center;
