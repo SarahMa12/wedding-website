@@ -55,7 +55,7 @@ export default function FAQ() {
                 {/* Background Image */}
                 <div className={styles.heroImage}>
                     <Image
-                        src="/images/faq.jpg"  // <-- same one as RSVP/Registry
+                        src="/images/faq.JPG"  // <-- same one as RSVP/Registry
                         alt="FAQ Background"
                         fill
                         style={{ objectFit: "cover" }}
