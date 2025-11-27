@@ -32,7 +32,7 @@
 .heroCard {
   position: relative;
   z-index: 1;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
   padding: 2.4rem 2.8rem;
   width: min(90%, 720px);

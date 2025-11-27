@@ -65,11 +65,6 @@ export default function FAQ() {
 
                 {/* Foreground Card */}
                 <div className={styles.heroCard}>
-                    <h1 className={styles.pageTitle}>FAQ</h1>
-                    <p className={styles.pageSubheading}>
-                        Common questions to help you prepare for our wedding weekend.
-                    </p>
-
                     <button
                         className={styles.resetButton}
                         onClick={() => {
