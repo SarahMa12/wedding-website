@@ -40,7 +40,6 @@ export default function App({ Component, pageProps }) {
   if (isProtected && !unlocked) {
     return (
       <>
-        <Navbar />
         <PasswordGate onUnlock={() => setUnlocked(true)} />
       </>
     );
