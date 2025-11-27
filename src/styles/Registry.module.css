@@ -3,16 +3,26 @@
   background-color: #fefcf6; /* same base as other pages */
 }
 
+.topImageWrapper {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 100px); /* fills full screen minus navbar */
+  overflow: hidden;
+}
+
+
+
 /* Centered layout similar to RSVP but without hero image */
 .registryInner {
   max-width: 900px;
   width: 100%;
-  margin: -6rem auto;
-  min-height: 100vh; /* leave room for navbar */
+  margin: 0 auto;
+  min-height: 60vh;
   padding: 4rem 1.5rem 4.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateY(-80px); /* brings the white card up over image */
 }
 
 /* Card like RSVP heroCard but on plain background */
@@ -82,3 +92,4 @@
     font-size: 0.9rem;
   }
 }
+

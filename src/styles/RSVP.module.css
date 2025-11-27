@@ -5,13 +5,13 @@
 
 /* SECTION WRAPPER */
 .heroWrapper {
-  position: relative;
+  position: absolute;
   width: 100%;
   min-height: calc(100vh - 100px); /* room for navbar, grows with content */
   padding: 4rem 1.5rem 4.5rem;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center; /* center like Registry */
 }
 
 /* Background image layer */
@@ -28,19 +28,19 @@
   object-fit: cover;
 }
 
-/* Foreground card */
+/* Foreground card – now matching Registry card */
 .heroCard {
   position: relative;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(14px);
-  padding: 2.2rem 2.6rem;
-  border-radius: 20px;
+  background: #ffffff; /* solid white like registryCard */
+  padding: 2.4rem 2.8rem; /* match registryCard padding */
+  border-radius: 20px; /* match registryCard radius */
   width: min(90%, 640px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12); /* softer, like registryCard */
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  transform: translateY(-190px); /* brings the white card up over image */
 }
 
 /* Title + subheading */
@@ -191,7 +191,7 @@
 @media (max-width: 900px) {
   .heroWrapper {
     padding: 3.5rem 1.5rem 4rem;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .heroCard {
@@ -205,7 +205,7 @@
   }
 
   .heroCard {
-    padding: 1.9rem 1.9rem;
+    padding: 2rem 2rem;
     width: min(94%, 540px);
   }
 
@@ -224,7 +224,7 @@
   }
 
   .heroCard {
-    padding: 1.6rem 1.4rem;
+    padding: 1.7rem 1.4rem;
     width: 92%;
   }
 
