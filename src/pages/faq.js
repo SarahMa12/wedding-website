@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 import styles from "@/styles/FAQ.module.css";
 
 const faqs = [
@@ -37,43 +38,65 @@ const faqs = [
 ];
 
 export default function FAQ() {
-    // Keep track of which FAQs are open
     const [openIndexes, setOpenIndexes] = useState([]);
 
     const toggleFAQ = (index) => {
-    if (openIndexes.includes(index)) {
-        // Close this FAQ
-        setOpenIndexes(openIndexes.filter((i) => i !== index));
-    } else {
-        // Open this FAQ
-        setOpenIndexes([...openIndexes, index]);
-    }
+        if (openIndexes.includes(index)) {
+            setOpenIndexes(openIndexes.filter((i) => i !== index));
+        } else {
+            setOpenIndexes([...openIndexes, index]);
+        }
     };
 
     return (
-        <div className="body-container">
-            <button onClick={() => {
-                localStorage.removeItem("wedding_pw_ok");
-                window.location.reload();
-                }}>
-                Reset Password Lock
-            </button>
-            <div className={styles.faq}>
-                {faqs.map((faq, index) => (
-                    <div className={styles.card} key={index}>
-                        <div
-                            className={styles.question}
-                            onClick={() => toggleFAQ(index)}
-                            style={{ cursor: "pointer" }}
-                        >
-                            {faq.question}
-                        </div>
+        <div className={styles.faqPage}>
+            <div className={styles.heroWrapper}>
+                
+                {/* Background Image */}
+                <div className={styles.heroImage}>
+                    <Image
+                        src="/images/faq.jpg"  // <-- same one as RSVP/Registry
+                        alt="FAQ Background"
+                        fill
+                        style={{ objectFit: "cover" }}
+                        priority
+                    />
+                </div>
 
-                        {openIndexes.includes(index) && (
-                            <div className={styles.answer}>{faq.answer}</div>
-                        )}
+                {/* Foreground Card */}
+                <div className={styles.heroCard}>
+                    <h1 className={styles.pageTitle}>FAQ</h1>
+                    <p className={styles.pageSubheading}>
+                        Common questions to help you prepare for our wedding weekend.
+                    </p>
+
+                    <button
+                        className={styles.resetButton}
+                        onClick={() => {
+                            localStorage.removeItem("wedding_pw_ok");
+                            window.location.reload();
+                        }}
+                    >
+                        Reset Password Lock
+                    </button>
+
+                    <div className={styles.faq}>
+                        {faqs.map((faq, index) => (
+                            <div className={styles.card} key={index}>
+                                <div
+                                    className={styles.question}
+                                    onClick={() => toggleFAQ(index)}
+                                >
+                                    {faq.question}
+                                </div>
+
+                                {openIndexes.includes(index) && (
+                                    <div className={styles.answer}>{faq.answer}</div>
+                                )}
+                            </div>
+                        ))}
                     </div>
-                ))}
+                </div>
             </div>
         </div>
     );
