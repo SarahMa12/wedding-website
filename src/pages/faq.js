@@ -52,6 +52,12 @@ export default function FAQ() {
 
     return (
         <div className="body-container">
+            <button onClick={() => {
+                localStorage.removeItem("wedding_pw_ok");
+                window.location.reload();
+                }}>
+                Reset Password Lock
+            </button>
             <div className={styles.faq}>
                 {faqs.map((faq, index) => (
                     <div className={styles.card} key={index}>
