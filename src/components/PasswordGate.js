@@ -5,11 +5,11 @@ import styles from "@/styles/PasswordGate.module.css";
 export default function PasswordGate({ onUnlock }) {
   const [input, setInput] = useState("");
   const [error, setError] = useState("");
-  const PASSWORD = "kokoteddy";
+  const PASSWORD = "Kokoteddy";
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const value = input.trim().toLowerCase();
+    const value = input.trim()
 
     if (value === PASSWORD) {
       if (typeof window !== "undefined") {
