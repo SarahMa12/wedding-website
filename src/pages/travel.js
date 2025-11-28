@@ -160,10 +160,14 @@ export default function Travel() {
                         </div>
 
                         <div className={styles.rideBlock}>
-                            <h3 className={styles.subheader}>Uber</h3>
+                            <h3 className={styles.subheader}>Uber/Lyft/Waymo</h3>
                             <p className={styles.cars}>
-                                We’ll provide an Uber code for round-trip rides to and from the venue.
-                                Details will be shared closer to the date.
+                                Rideshares are readily available throughout San Jose/Bay Area and are an easy
+                                way to travel to and from the venue.
+                            </p>
+                            <p className={styles.cars}>
+                                We are also exploring a shuttle option for guest convenience; final plans will be shared
+                                as we get closer to the wedding.
                             </p>
                         </div>
                     </div>

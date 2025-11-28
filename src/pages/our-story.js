@@ -47,7 +47,7 @@ export default function OurStory() {
               loved Koko, quirks and all, my heart practically melted.
             </p>
             <p>
-              The proposal happened on the most beautiful morning in Lake Como.
+              The proposal happened on the most beautiful morning in Lake Como on August 2023.
               We were on a private boat gliding across the water when he asked
               me to marry him at Villa Balbiano, the breathtaking place where
               Padmé and Anakin were married in Star Wars. I was overwhelmed with
