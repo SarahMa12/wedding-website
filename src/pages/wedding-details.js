@@ -47,7 +47,7 @@ export default function WeddingDetails() {
                                 className={styles.locationIcon}
                             />
                             <span className={styles.weddingLocationText}>
-                                3267 Knightswood Way, San Jose, CA, 95148
+                                TBD
                             </span>
                         </div>
                         <div className={styles.attire}>Attire: Cocktail</div>

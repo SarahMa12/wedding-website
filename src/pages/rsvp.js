@@ -61,7 +61,7 @@ export default function RSVP() {
     }
   };
 
-  const FORM_VISIBLE = false;
+  const FORM_VISIBLE = true;
 
   return (
     <div className={styles.rsvpPage}>
