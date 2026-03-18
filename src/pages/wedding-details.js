@@ -47,7 +47,7 @@ export default function WeddingDetails() {
                                 className={styles.locationIcon}
                             />
                             <span className={styles.weddingLocationText}>
-                                <a className={styles.restaurantLink} href="https://www.yelp.com/biz/meso-modern-mediterranean-san-jose-2">Meso Modern Mediterranean</a>
+                                <a className={styles.restaurantLink} target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Meso+Modern+Mediterranean+San+Jose">Meso Modern Mediterranean</a>
                             </span>
                         </div>
                         <div className={styles.attire}>Attire: Cocktail</div>
@@ -87,7 +87,7 @@ export default function WeddingDetails() {
                                 className={styles.locationIcon}
                             />
                             <span className={styles.weddingLocationText}>
-                                2551 Mount Pleasant Rd, San Jose, CA, 95148
+                                <a className={styles.restaurantLink} target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/2551+Mt+Pleasant+Rd,+San+Jose,+CA+95148/@37.341688,-121.7791962,17z/data=!3m1!4b1!4m6!3m5!1s0x808e2d3b2baf4223:0xb1d0db8f4d06b15b!8m2!3d37.3416838!4d-121.7766159!16s%2Fg%2F11c5jxg1m0?entry=ttu&g_ep=EgoyMDI2MDMxNS4wIKXMDSoASAFQAw%3D%3D">2551 Mount Pleasant Rd, San Jose, CA, 95148</a>
                             </span>
                         </div>
                         <div className={styles.attire}>Attire: Formal, black-tie optional</div>
@@ -147,7 +147,7 @@ export default function WeddingDetails() {
                                 className={styles.locationIcon}
                             />
                             <span className={styles.weddingLocationText}>
-                                3267 Knightswood Way, San Jose, CA, 95148
+                                <a className={styles.restaurantLink} target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/3267+Knightswood+Way,+San+Jose,+CA+95148/@37.3276489,-121.7820109,17z/data=!3m1!4b1!4m6!3m5!1s0x808e2d111e2ee28b:0x4bc667fb2f02f38b!8m2!3d37.3276447!4d-121.7794306!16s%2Fg%2F11c1kyw6mb?entry=ttu&g_ep=EgoyMDI2MDMxNS4wIKXMDSoASAFQAw%3D%3D">3267 Knightswood Way, San Jose, CA, 95148</a>
                             </span>
                         </div>
                         <div className={styles.attire}>Attire: Casual</div>
