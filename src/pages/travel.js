@@ -151,7 +151,6 @@ export default function Travel() {
                             <h3 className={styles.subheader}>Cars</h3>
                             <p className={styles.cars}>
                                 You’re welcome to rent a car to explore the Bay Area, but there is no parking on site.
-                                We highly recommend using the provided rideshare code.
                             </p>
                             <p className={styles.cars}>
                                 If you prefer to park nearby, you may park at{" "}
