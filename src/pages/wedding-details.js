@@ -80,9 +80,16 @@ export default function WeddingDetails() {
                             </span>
                         </div>
                         <div className={styles.weddingDate}>SATURDAY, SEPTEMBER 12, 2026</div>
-                        <span className={styles.weddingLocationText}>
-                            2551 Mount Pleasant Rd, San Jose, CA, 95148
-                        </span>
+                        <div className={styles.weddingLocation}>
+                            <img
+                                src="/images/location.svg"
+                                alt=""
+                                className={styles.locationIcon}
+                            />
+                            <span className={styles.weddingLocationText}>
+                                2551 Mount Pleasant Rd, San Jose, CA, 95148
+                            </span>
+                        </div>
                         <div className={styles.attire}>Attire: Formal, black-tie optional</div>
                         <div className={styles.desc}>
                             We're celebrating our love with a dreamy backyard ceremony surrounded by
