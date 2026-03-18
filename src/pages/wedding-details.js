@@ -47,7 +47,7 @@ export default function WeddingDetails() {
                                 className={styles.locationIcon}
                             />
                             <span className={styles.weddingLocationText}>
-                                TBD
+                                <a href="https://www.yelp.com/biz/meso-modern-mediterranean-san-jose-2">3060 Olsen Dr Ste 50 San Jose, CA 95128</a>
                             </span>
                         </div>
                         <div className={styles.attire}>Attire: Cocktail</div>
@@ -59,8 +59,11 @@ export default function WeddingDetails() {
 
                     <div className={styles.schedule}>
                         <div className={styles.scheduleTitle}>Schedule</div>
-                        <div className={styles.event}>
-                            TBA
+                            <div className={styles.eventGrid}>
+                            <div className={styles.eventRow}>
+                                <span className={styles.time}>8:00 PM</span>
+                                <span className={styles.eventLabel}>Guest Arrival</span>
+                            </div>
                         </div>
                     </div>
                 </div>
