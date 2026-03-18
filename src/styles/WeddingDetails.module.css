@@ -254,3 +254,67 @@
 }
 
 
+/* Container for the whole location row */
+.calendarLinkWrapper {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: opacity 0.2s ease;
+}
+
+.calendarLinkWrapper:hover {
+    opacity: 0.8;
+}
+
+.iconContainer {
+    position: relative; /* 👈 CRITICAL: This keeps the tooltip 'attached' to the icon */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* This is the floater */
+.hoverTooltip {
+    position: absolute; /* 👈 This removes it from the document flow so it doesn't push text */
+    bottom: 110%;       /* 👈 Places it right above the icon */
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    
+    /* Your existing styling */
+    white-space: nowrap;
+    background-color: rgba(199, 169, 110, 0.8);
+    color: white;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    
+    /* Hide by default */
+    opacity: 0;
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* The hover trigger */
+.iconContainer:hover .hoverTooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.restaurantLink {
+    text-decoration: none; /* 👈 Removes the underline */
+    color: inherit;        /* 👈 Takes the color of the text around it (or #c7a96e) */
+    transition: color 0.3s ease;
+}
+
+/* This handles the "visited" (purple) and "active" states */
+.restaurantLink:visited, 
+.restaurantLink:active {
+    color: inherit;        /* 👈 Forces it to stay the same even after clicking */
+}
+
+/* Optional: Add a subtle hover effect so guests know it's a link */
+.restaurantLink:hover {
+    color: #c7a96e;        /* Or whatever your accent gold color is */
+    text-decoration: underline; /* Only show underline when hovering */
+}

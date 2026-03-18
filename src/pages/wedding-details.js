@@ -47,7 +47,7 @@ export default function WeddingDetails() {
                                 className={styles.locationIcon}
                             />
                             <span className={styles.weddingLocationText}>
-                                <a href="https://www.yelp.com/biz/meso-modern-mediterranean-san-jose-2">3060 Olsen Dr Ste 50 San Jose, CA 95128</a>
+                                <a className={styles.restaurantLink} href="https://www.yelp.com/biz/meso-modern-mediterranean-san-jose-2">Meso Modern Mediterranean</a>
                             </span>
                         </div>
                         <div className={styles.attire}>Attire: Cocktail</div>
@@ -80,16 +80,9 @@ export default function WeddingDetails() {
                             </span>
                         </div>
                         <div className={styles.weddingDate}>SATURDAY, SEPTEMBER 12, 2026</div>
-                        <div className={styles.weddingLocation}>
-                            <img
-                                src="/images/location.svg"
-                                alt=""
-                                className={styles.locationIcon}
-                            />
-                            <span className={styles.weddingLocationText}>
-                                2551 Mount Pleasant Rd, San Jose, CA, 95148
-                            </span>
-                        </div>
+                        <span className={styles.weddingLocationText}>
+                            2551 Mount Pleasant Rd, San Jose, CA, 95148
+                        </span>
                         <div className={styles.attire}>Attire: Formal, black-tie optional</div>
                         <div className={styles.desc}>
                             We're celebrating our love with a dreamy backyard ceremony surrounded by
