@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "../components/Navbar";
 import PasswordGate from "@/components/PasswordGate";
 import "@/styles/globals.css";
@@ -53,6 +54,7 @@ export default function App({ Component, pageProps }) {
           <Component {...pageProps} />
         </>
       )}
+      <Analytics />
     </>
   );
 
