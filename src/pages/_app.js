@@ -1,6 +1,7 @@
 // pages/_app.js
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 import Navbar from "../components/Navbar";
 import PasswordGate from "@/components/PasswordGate";
 import "@/styles/globals.css";
@@ -36,20 +37,24 @@ export default function App({ Component, pageProps }) {
   // wait until we've checked localStorage
   if (!ready) return null;
 
-  // If route is protected & not unlocked yet → show password screen instead
-  if (isProtected && !unlocked) {
-    return (
-      <>
-        <PasswordGate onUnlock={() => setUnlocked(true)} />
-      </>
-    );
-  }
-
-  // Normal render once unlocked or on unprotected routes
-  return (
+  const content = (
     <>
-      <Navbar />
-      <Component {...pageProps} />
+      <Head>
+        <title>Syrena & George&apos;s Wedding</title>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </Head>
+      {isProtected && !unlocked ? (
+        <PasswordGate onUnlock={() => setUnlocked(true)} />
+      ) : (
+        <>
+          <Navbar />
+          <Component {...pageProps} />
+        </>
+      )}
     </>
   );
+
+  return content;
 }

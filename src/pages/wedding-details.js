@@ -9,8 +9,8 @@ export default function WeddingDetails() {
                 <header className={styles.pageHeader}>
                     <h1 className={styles.pageTitle}>Wedding Weekend</h1>
                     <p className={styles.pageSubheading}>
-                        A weekend of celebrations in San Jose with welcome drinks, a dreamy backyard
-                        wedding, and a cozy farewell by the pool.
+                        A weekend of celebrations in San Jose with welcome drinks at Meso, 
+                        an intimate garden ceremony, and a farewell by the pool.
                     </p>
                 </header>
 
@@ -92,9 +92,8 @@ export default function WeddingDetails() {
                         </div>
                         <div className={styles.attire}>Attire: Black-tie optional</div>
                         <div className={styles.desc}>
-                            We're celebrating our love with a dreamy backyard ceremony surrounded by
-                            flowers, family, and the people we adore most. Cozy, heartfelt, and
-                            filled with moments we'll remember forever.
+                            We're celebrating our love with an intimate garden ceremony surrounded by
+                            flowers, family, and the people we adore most.
                         </div>
                     </div>
 
@@ -133,10 +132,10 @@ export default function WeddingDetails() {
                                 <span className={styles.letter}>T</span>he
                             </span>
                             <span className={styles.word}>
-                                <span className={styles.letter}>B</span>runch
+                                <span className={styles.letter}>F</span>arewell
                             </span>
                             <span className={styles.word}>
-                                <span className={styles.letter}>F</span>arewell
+                                <span className={styles.letter}>S</span>plash
                             </span>
                         </div>
                         <div className={styles.weddingDate}>SUNDAY, SEPTEMBER 13, 2026</div>
