@@ -29,7 +29,7 @@ const faqs = [
     },
     {
         question: "Is there a dress code?",
-        answer: "Dress to impress! Our wedding is formal, so feel free to wear your best outfit and be prepared to celebrate with us. Plan for floor-length elegance, elevated eveningwear, and classic suits or tuxes; kindly avoid cocktail dresses or casual outfits. As it’s an outdoor celebration, a light shawl or cardigan is recommended for the evening breeze.",
+        answer: "Dress to impress! Our wedding is black-tie optional, plan for floor-length elegance, elevated eveningwear, and classic tuxedo (preferred or dark suits); kindly avoid cocktail dresses or casual outfits. As it’s an outdoor celebration, a light shawl or cardigan is recommended for the evening breeze.",
     },
     {
         question: "Where should I stay?",
