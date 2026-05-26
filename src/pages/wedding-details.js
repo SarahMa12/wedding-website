@@ -90,7 +90,7 @@ export default function WeddingDetails() {
                                 <a className={styles.restaurantLink} target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/2551+Mt+Pleasant+Rd,+San+Jose,+CA+95148/@37.341688,-121.7791962,17z/data=!3m1!4b1!4m6!3m5!1s0x808e2d3b2baf4223:0xb1d0db8f4d06b15b!8m2!3d37.3416838!4d-121.7766159!16s%2Fg%2F11c5jxg1m0?entry=ttu&g_ep=EgoyMDI2MDMxNS4wIKXMDSoASAFQAw%3D%3D">2551 Mount Pleasant Rd, San Jose, CA, 95148</a>
                             </span>
                         </div>
-                        <div className={styles.attire}>Attire: Black tie</div>
+                        <div className={styles.attire}>Attire: Black-tie optional</div>
                         <div className={styles.desc}>
                             We're celebrating our love with a dreamy backyard ceremony surrounded by
                             flowers, family, and the people we adore most. Cozy, heartfelt, and
@@ -113,12 +113,12 @@ export default function WeddingDetails() {
                             </div>
 
                             <div className={styles.eventRow}>
-                                <span className={styles.time}>6:00 PM</span>
+                                <span className={styles.time}>5:30 PM</span>
                                 <span className={styles.eventLabel}>Cocktail Hour</span>
                             </div>
 
                             <div className={styles.eventRow}>
-                                <span className={styles.time}>7:00 PM</span>
+                                <span className={styles.time}>6:30 PM</span>
                                 <span className={styles.eventLabel}>Wedding Reception</span>
                             </div>
                         </div>
@@ -159,8 +159,9 @@ export default function WeddingDetails() {
 
                     <div className={styles.schedule}>
                         <div className={styles.scheduleTitle}>Schedule</div>
-                        <div className={styles.event}>
-                            TBA
+                        <div className={styles.eventRow}>
+                            <span className={styles.time}>11:30 AM</span>
+                            <span className={styles.eventLabel}>Guest Arrival</span>
                         </div>
                     </div>
                 </div>
