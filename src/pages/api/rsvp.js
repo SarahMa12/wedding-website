@@ -162,7 +162,7 @@ export default async function handler(req, res) {
         `;
 
         await resend.emails.send({
-          from: "Wedding Website <onboarding@resend.dev>",
+          from: "Syrena & George <hello@syrenaandgeorge.com>",
           to: data.email,
           subject: "You’re on the list — Syrena & George, September 12",
           html: emailHtml,
