@@ -22,12 +22,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(-80px); /* brings the white card up over image */
+  transform: translateY(-40px);
 }
 
 /* Card like RSVP heroCard but on plain background */
 .registryCard {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.9); /* Added transparency */
   border-radius: 20px;
   padding: 2.4rem 2.8rem;
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
@@ -52,8 +52,28 @@
   font-size: 1rem;
   color: #555;
   max-width: 520px;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem;
   line-height: 1.7;
+}
+
+.honeyfundButton {
+  display: inline-block;
+  background-color: #c7a96e;
+  color: #ffffff;
+  padding: 0.8rem 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(199, 169, 110, 0.3);
+}
+
+.honeyfundButton:hover {
+  background-color: #b5955a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(199, 169, 110, 0.4);
 }
 
 /* Responsive tweaks */

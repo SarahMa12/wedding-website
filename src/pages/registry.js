@@ -21,9 +21,16 @@ export default function Registry() {
         <div className={styles.registryCard}>
           <h1 className={styles.pageTitle}>Registry</h1>
           <p className={styles.pageSubheading}>
-            We&apos;re putting together something meaningful for our registry.
-            More information will be available soon.
+            Your presence is the greatest gift. If you&apos;d like to contribute something, we&apos;ve set up a Honeyfund to help us celebrate our honeymoon together.
           </p>
+          <a
+            href="https://www.honeyfund.com/site/Syrena-george"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.honeyfundButton}
+          >
+            Visit Our Honeyfund
+          </a>
         </div>
       </div>
     </div>
