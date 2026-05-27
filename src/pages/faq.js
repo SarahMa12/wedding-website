@@ -13,23 +13,19 @@ const faqs = [
     },
     {
         question: "Can we sit anywhere at the reception?",
-        answer: "We have assigned seats for each of you. It took us a lot of effort and discussion to finalize the seating arrangement which is meant for everyone's convenience and group familiarity, so no need to worry. Our coordinator will gladly assist you in finding your designated seats.",
+        answer: "We have assigned seats for each of you. It took us a lot of effort and discussion to finalize the seating arrangement which is meant for everyone's convenience and group familiarity, so no need to worry. Our planner will gladly assist you in finding your designated seats.",
     },
     {
         question: "What if I did not RSVP but will attend the wedding?",
-        answer: "No RSVP = No Seat. We will assign your seats so we strongly suggest you do the RSVP on or before July 15, 2026 or you may contact and inform us ahead of time. In any case that you may have said 'Yes' in our RSVP and suddenly won't be able to attend, please let us know ASAP so we can accomodate any changes.",
+        answer: "No RSVP = No Seat. We will assign your seats so we strongly suggest you do the RSVP on or before July 12, 2026 or you may contact and inform us ahead of time. In any case that you may have said 'Yes' in our RSVP and suddenly won't be able to attend, please let us know ASAP so we can accomodate any changes.",
     },
     {
         question: "When should we arrive at the venue?",
         answer: "The ceremony will strictly start at 5:00 PM. Please arrive to the venue by 4:30 to enjoy pre-ceremony welcome drinks and mingle.",
     },
     {
-        question: "When can we leave?",
-        answer: "The program is estimated to last until 10:00 PM. We are hoping that you will stay with us until the end of the program.",
-    },
-    {
         question: "Is there a dress code?",
-        answer: "Dress to impress! Our wedding is black-tie optional, plan for floor-length elegance, elevated eveningwear, and classic tuxedo (preferred or dark suits); kindly avoid cocktail dresses or casual outfits. As it’s an outdoor celebration, a light shawl or cardigan is recommended for the evening breeze.",
+        answer: "Dress to impress! Our wedding is black-tie optional, plan for floor-length elegance, elevated eveningwear, and classic tuxedo (preferred) or dark suits; avoid cocktail dresses or casual outfits. As it’s an outdoor celebration, a light shawl or cardigan is recommended for the evening breeze.",
     },
     {
         question: "Where should I stay?",
