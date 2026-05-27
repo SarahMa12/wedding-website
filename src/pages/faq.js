@@ -35,6 +35,11 @@ const faqs = [
         question: "Where should I stay?",
         answer: 'Check out the "Travel" page on our site for more information on hotels in the area.',
     },
+    {
+        question: "Is there parking at the venue?",
+        answer: "The venue does not have guest parking. If you’re driving, park along our designated zones on Flint Ave or Brackett Ave - a shuttle will loop through to pick you up. Rideshare is encouraged if you plan to drink so you can enjoy the night to the fullest!",
+        image: "/images/parking-map.jpeg",
+    },
 ];
 
 export default function FAQ() {
@@ -65,16 +70,6 @@ export default function FAQ() {
 
                 {/* Foreground Card */}
                 <div className={styles.heroCard}>
-                    <button
-                        className={styles.resetButton}
-                        onClick={() => {
-                            localStorage.removeItem("wedding_pw_ok");
-                            window.location.reload();
-                        }}
-                    >
-                        Reset Password Lock
-                    </button>
-
                     <div className={styles.faq}>
                         {faqs.map((faq, index) => (
                             <div className={styles.card} key={index}>
@@ -86,7 +81,20 @@ export default function FAQ() {
                                 </div>
 
                                 {openIndexes.includes(index) && (
-                                    <div className={styles.answer}>{faq.answer}</div>
+                                    <div className={styles.answer}>
+                                        <p>{faq.answer}</p>
+                                        {faq.image && (
+                                            <div className={styles.answerImage}>
+                                                <Image
+                                                    src={faq.image}
+                                                    alt="FAQ detail"
+                                                    width={600}
+                                                    height={400}
+                                                    className={styles.faqImage}
+                                                />
+                                            </div>
+                                        )}
+                                    </div>
                                 )}
                             </div>
                         ))}

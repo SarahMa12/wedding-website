@@ -61,25 +61,6 @@
   line-height: 1.7;
 }
 
-/* Password reset utility button */
-.resetButton {
-  align-self: flex-end;
-  font-size: 0.82rem;
-  padding: 0.35rem 0.75rem;
-  border: 1px solid rgba(199, 169, 110, 0.55);
-  border-radius: 999px;
-  background: #fdf7ec;
-  color: #4a3b1c;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  transition: 0.25s ease;
-}
-
-.resetButton:hover {
-  background: #c7a96e;
-  color: #fff;
-}
-
 /* FAQ LIST INSIDE CARD */
 .faq {
   display: flex;
@@ -113,6 +94,20 @@
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
+}
+
+.answerImage {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.faqImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #c7a96e;
 }
 
 /* RESPONSIVE */
