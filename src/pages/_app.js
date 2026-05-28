@@ -42,8 +42,8 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <title>Syrena & George&apos;s Wedding</title>
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>
       {isProtected && !unlocked ? (
