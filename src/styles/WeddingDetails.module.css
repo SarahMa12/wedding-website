@@ -302,19 +302,19 @@
 }
 
 .restaurantLink {
-    text-decoration: none; /* 👈 Removes the underline */
-    color: inherit;        /* 👈 Takes the color of the text around it (or #c7a96e) */
+    text-decoration: none;
+    color: inherit;     
     transition: color 0.3s ease;
 }
 
 /* This handles the "visited" (purple) and "active" states */
 .restaurantLink:visited, 
 .restaurantLink:active {
-    color: inherit;        /* 👈 Forces it to stay the same even after clicking */
+    color: inherit;      
 }
 
 /* Optional: Add a subtle hover effect so guests know it's a link */
 .restaurantLink:hover {
-    color: #c7a96e;        /* Or whatever your accent gold color is */
-    text-decoration: underline; /* Only show underline when hovering */
+    color: #c7a96e;      
+    text-decoration: underline;
 }
