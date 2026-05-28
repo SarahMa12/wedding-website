@@ -164,7 +164,7 @@ export default function Travel() {
                         
                         <div className={styles.parkingMap}>
                             <Image 
-                                src="/images/parking-map.jpeg" 
+                                src="/images/parking-map.jpg" 
                                 alt="Parking Map" 
                                 width={600} 
                                 height={450} 

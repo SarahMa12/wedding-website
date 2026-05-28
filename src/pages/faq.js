@@ -34,7 +34,7 @@ const faqs = [
     {
         question: "Is there parking at the venue?",
         answer: "The venue does not have guest parking. If you’re driving, park along our designated zones on Flint Ave or Brackett Ave - a shuttle will loop through to pick you up. Rideshare is encouraged if you plan to drink so you can enjoy the night to the fullest!",
-        image: "/images/parking-map.jpeg",
+        image: "/images/parking-map.jpg",
     },
 ];
 
