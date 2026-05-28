@@ -143,31 +143,33 @@ export default function Travel() {
                             </span>
                             <h2 className={styles.header}>Getting to the Venue</h2>
                         </div>
-                        <span className={styles.sectionTag}>Rides &amp; Parking</span>
+                        <span className={styles.sectionTag}>Parking &amp; Shuttle</span>
                     </div>
 
-                    <div className={styles.ridesGrid}>
-                        <div className={styles.rideBlock}>
-                            <h3 className={styles.subheader}>Cars</h3>
+                    <div className={styles.parkingContent}>
+                        <div className={styles.parkingText}>
+                            <h3 className={styles.subheader}>Parking</h3>
                             <p className={styles.cars}>
-                                You’re welcome to rent a car to explore the Bay Area, but there is no parking on site.
+                                The venue does not have guest parking. If you’re driving, please park along our designated zones on <strong>Flint Ave</strong> and <strong>Brackett Ave</strong> (near <a href="https://www.google.com/maps/place/3311+Arqueado+Dr,+San+Jose,+CA+95148" target="_blank" rel="noopener noreferrer" style={{ color: '#c7a96e', textDecoration: 'underline' }}>3311 Arqueado Dr, San Jose, CA 95148</a>). 
                             </p>
                             <p className={styles.cars}>
-                                If you prefer to park nearby, you may park at{" "}
-                                <strong>3311 Arqueado Drive, San Jose, CA 95148</strong>.
+                                A shuttle will be looping through these streets to pick guests up and bring you directly to the venue.
+                            </p>
+                            
+                            <h3 className={styles.subheader} style={{ marginTop: '1.5rem' }}>Rideshare</h3>
+                            <p className={styles.cars}>
+                                Uber, Lyft, and Waymo are readily available throughout San Jose. We highly encourage ridesharing if you plan to drink so you can enjoy the night to the fullest!
                             </p>
                         </div>
-
-                        <div className={styles.rideBlock}>
-                            <h3 className={styles.subheader}>Uber/Lyft/Waymo</h3>
-                            <p className={styles.cars}>
-                                Rideshares are readily available throughout San Jose/Bay Area and are an easy
-                                way to travel to and from the venue.
-                            </p>
-                            <p className={styles.cars}>
-                                We are also exploring a shuttle option for guest convenience; final plans will be shared
-                                as we get closer to the wedding.
-                            </p>
+                        
+                        <div className={styles.parkingMap}>
+                            <Image 
+                                src="/images/parking-map.jpeg" 
+                                alt="Parking Map" 
+                                width={600} 
+                                height={450} 
+                                className={styles.mapImage}
+                            />
                         </div>
                     </div>
                 </section>
