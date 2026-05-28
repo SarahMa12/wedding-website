@@ -56,7 +56,7 @@ export default function OurStory() {
             </p>
           </div>
 
-          <div className={styles.storyImageCard}>
+          <div className={`${styles.storyImageCard} ${styles.firstImageCard}`}>
             <Image
               src="/images/her-story.png"
               alt="Her story image"
@@ -65,6 +65,9 @@ export default function OurStory() {
               style={{ width: "100%", height: "auto", borderRadius: "12px" }}
               quality={100}
             />
+            <div className={styles.imageCaption}>
+              Sutro baths 2018<br/>Disney world 2020
+            </div>
           </div>
         </section>
 
@@ -115,6 +118,9 @@ export default function OurStory() {
               style={{ width: "100%", height: "auto", borderRadius: "12px" }}
               quality={100}
             />
+            <div className={styles.imageCaption}>
+              Stern grove stroll 2018<br/>Lake como 2023
+            </div>
           </div>
         </section>
       </div>
