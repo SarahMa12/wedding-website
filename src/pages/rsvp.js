@@ -259,7 +259,9 @@ export default function RSVP() {
                   <>
                     {inviteeData?.rehearsalDinner && (
                       <div className={styles.formGroup}>
-                        <div className={styles.sectionHeader}>Rehearsal Dinner</div>
+                        <div className={styles.sectionHeader}>
+                          Rehearsal Dinner <span className={styles.inviteOnlyNote}>(Invite Only)</span>
+                        </div>
                         <div className={styles.formQuestion}>
                           <label>Will your party be attending the Rehearsal Dinner?</label>
                           <div className={styles.radioGroup}>
@@ -291,7 +293,9 @@ export default function RSVP() {
 
                     {inviteeData?.teaCeremony && (
                       <div className={styles.formGroup}>
-                        <div className={styles.sectionHeader}>Tea Ceremony</div>
+                        <div className={styles.sectionHeader}>
+                          Tea Ceremony <span className={styles.inviteOnlyNote}>(Invite Only)</span>
+                        </div>
                         <div className={styles.formQuestion}>
                           <label>Will your party be attending the Tea Ceremony?</label>
                           <div className={styles.radioGroup}>
