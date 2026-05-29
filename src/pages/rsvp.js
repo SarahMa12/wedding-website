@@ -8,6 +8,7 @@ export default function RSVP() {
   const [step, setStep] = useState("lookup"); // "lookup", "form", or "success"
   const [searchName, setSearchName] = useState("");
   const [isSearching, setIsSearching] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [inviteeData, setInviteeData] = useState(null);
   const [submittedEmail, setSubmittedEmail] = useState("");
@@ -79,7 +80,9 @@ export default function RSVP() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
 
+    setIsSubmitting(true);
     const formData = new FormData(e.target);
     
     // Check if at least one person is attending
@@ -113,12 +116,15 @@ export default function RSVP() {
         setSubmittedEmail(data.email || "");
         setLastAnyoneAttending(anyoneAttending);
         setStep("success");
+        setIsSubmitting(false);
       } else {
         alert("Something went wrong. Please try again.");
+        setIsSubmitting(false);
       }
     } catch (err) {
       console.error("Error submitting RSVP:", err);
       alert("Something went wrong. Please try again.");
+      setIsSubmitting(false);
     }
   };
 
@@ -338,8 +344,12 @@ export default function RSVP() {
                   </div>
                 )}
 
-                <button type="submit" className={styles.submitButton}>
-                  Submit
+                <button 
+                  type="submit" 
+                  className={styles.submitButton}
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Submitting..." : "Submit"}
                 </button>
               </form>
             ) : (
