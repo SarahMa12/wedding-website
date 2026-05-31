@@ -25,7 +25,7 @@ const faqs = [
     },
     {
         question: "Is there a dress code?",
-        answer: "Dress to impress! Our wedding is black-tie optional, plan for floor-length elegance, elevated eveningwear, and classic tuxedo (preferred) or dark suits; avoid cocktail dresses or casual outfits. As it’s an outdoor celebration, a light shawl or cardigan is recommended for the evening breeze.",
+        answer: "Dress to impress! Our wedding is black-tie optional, plan for floor-length elegance, elevated eveningwear, and classic tuxedo (preferred) or dark suits; avoid cocktail dresses or casual outfits. We kindly ask that guests refrain from wearing white, cream, or ivory. As it’s an outdoor celebration, a light shawl or cardigan is recommended for the evening breeze.",
     },
     {
         question: "Where should I stay?",
