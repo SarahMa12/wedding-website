@@ -9,9 +9,9 @@ export default function PasswordGate({ onUnlock }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const value = input.trim()
+    const value = input.trim().toLowerCase();
 
-    if (value === PASSWORD) {
+    if (value === PASSWORD.toLowerCase()) {
       if (typeof window !== "undefined") {
         window.localStorage.setItem("wedding_pw_ok", "true");
       }
