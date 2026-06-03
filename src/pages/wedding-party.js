@@ -16,6 +16,7 @@ const weddingParty = [
   { name: "Jacob", role: "Bridesman", image: "/images/jacob.jpeg", relationship: "Cousin of Bride" },
   { name: "Sarah", role: "Bridesmaid", image: "/images/sarah.jpeg", relationship: "Sister of Bride" },
   { name: "Savannah", role: "Bridesmaid", image: "/images/savannah.jpeg", relationship: "Sister of Bride" },
+  { name: "Sean", role: "Groomsman", image: "/images/sean.png", relationship: "Friend of Groom" },
   { name: "Stephanie", role: "Bridesmaid", image: "/images/steph.jpeg", relationship: "Friend of Bride" },
   { name: "Koko", role: "Ring Bearer", image: "/images/koko.png", relationship: "Furbaby of Groom and Bride" },
   { name: "Teddy", role: "Ring Bearer", image: "/images/teddy.png", relationship: "Furbaby of Groom and Bride" },
