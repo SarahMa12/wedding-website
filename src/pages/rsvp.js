@@ -43,7 +43,11 @@ export default function RSVP() {
           initialResponses[member] = {
             attending: null,
             mealPref: "",
-            dietary: ""
+            dietary: "",
+            welcomeParty: null,
+            brunchFarewell: null,
+            teaCeremony: null,
+            rehearsalDinner: null
           };
         });
         setGuestResponses(initialResponses);
@@ -91,17 +95,22 @@ export default function RSVP() {
     const data = {
       invitationName: inviteeData.invitationName,
       submitterName: searchName, // Pass the name used for lookup
-      guests: Object.entries(guestResponses).map(([name, resp]) => ({
-        name,
-        attending: resp.attending,
-        mealPref: resp.attending === "yes" ? resp.mealPref : null,
-        dietary: resp.attending === "yes" ? resp.dietary : null,
-      })),
-      welcomeParty: anyoneAttending ? formData.get("welcomeParty") : "no",
-      teaCeremony: anyoneAttending ? formData.get("teaCeremony") : "no",
-      rehearsalDinner: anyoneAttending ? formData.get("rehearsalDinner") : "no",
+      guests: Object.entries(guestResponses).map(([name, resp]) => {
+        const guest = {
+          name,
+          attending: resp.attending,
+          mealPref: resp.attending === "yes" ? resp.mealPref : null,
+          dietary: resp.attending === "yes" ? resp.dietary : null,
+        };
+        if (resp.attending === "yes") {
+          guest.welcomeParty = resp.welcomeParty || "no";
+          guest.brunchFarewell = resp.brunchFarewell || "no";
+          if (inviteeData.teaCeremony) guest.teaCeremony = resp.teaCeremony || "no";
+          if (inviteeData.rehearsalDinner) guest.rehearsalDinner = resp.rehearsalDinner || "no";
+        }
+        return guest;
+      }),
       childCare: anyoneAttending && (formData.get("children") === "on") ? "acknowledged" : "no",
-      brunchFarewell: anyoneAttending ? formData.get("brunchFarewell") : "no",
       email: formData.get("email"),
     };
 
@@ -248,6 +257,118 @@ export default function RSVP() {
                                 rows={2}
                               />
                             </div>
+
+                            {inviteeData?.rehearsalDinner && (
+                              <div className={styles.formQuestion}>
+                                <label>Rehearsal Dinner <span className={styles.inviteOnlyNote}>(Invite Only)</span></label>
+                                <div className={styles.radioGroup}>
+                                  <label className={styles.radioLabel}>
+                                    <input
+                                      type="radio"
+                                      name={`rehearsalDinner_${i}`}
+                                      value="yes"
+                                      required
+                                      checked={guestResponses[member]?.rehearsalDinner === "yes"}
+                                      onChange={() => updateGuestResponse(member, "rehearsalDinner", "yes")}
+                                    />{" "}
+                                    Yes
+                                  </label>
+                                  <label className={styles.radioLabel}>
+                                    <input
+                                      type="radio"
+                                      name={`rehearsalDinner_${i}`}
+                                      value="no"
+                                      checked={guestResponses[member]?.rehearsalDinner === "no"}
+                                      onChange={() => updateGuestResponse(member, "rehearsalDinner", "no")}
+                                    />{" "}
+                                    No
+                                  </label>
+                                </div>
+                              </div>
+                            )}
+
+                            <div className={styles.formQuestion}>
+                              <label>Welcome Party (Fri Sep 11, 8 PM)</label>
+                              <div className={styles.radioGroup}>
+                                <label className={styles.radioLabel}>
+                                  <input
+                                    type="radio"
+                                    name={`welcomeParty_${i}`}
+                                    value="yes"
+                                    required
+                                    checked={guestResponses[member]?.welcomeParty === "yes"}
+                                    onChange={() => updateGuestResponse(member, "welcomeParty", "yes")}
+                                  />{" "}
+                                  Yes
+                                </label>
+                                <label className={styles.radioLabel}>
+                                  <input
+                                    type="radio"
+                                    name={`welcomeParty_${i}`}
+                                    value="no"
+                                    checked={guestResponses[member]?.welcomeParty === "no"}
+                                    onChange={() => updateGuestResponse(member, "welcomeParty", "no")}
+                                  />{" "}
+                                  No
+                                </label>
+                              </div>
+                            </div>
+
+                            {inviteeData?.teaCeremony && (
+                              <div className={styles.formQuestion}>
+                                <label>Tea Ceremony <span className={styles.inviteOnlyNote}>(Invite Only)</span></label>
+                                <div className={styles.radioGroup}>
+                                  <label className={styles.radioLabel}>
+                                    <input
+                                      type="radio"
+                                      name={`teaCeremony_${i}`}
+                                      value="yes"
+                                      required
+                                      checked={guestResponses[member]?.teaCeremony === "yes"}
+                                      onChange={() => updateGuestResponse(member, "teaCeremony", "yes")}
+                                    />{" "}
+                                    Yes
+                                  </label>
+                                  <label className={styles.radioLabel}>
+                                    <input
+                                      type="radio"
+                                      name={`teaCeremony_${i}`}
+                                      value="no"
+                                      checked={guestResponses[member]?.teaCeremony === "no"}
+                                      onChange={() => updateGuestResponse(member, "teaCeremony", "no")}
+                                    />{" "}
+                                    No
+                                  </label>
+                                </div>
+                              </div>
+                            )}
+
+                            <div className={styles.formQuestion}>
+                              <label>Farewell Splash (Sun Sep 13, 11:30 AM)</label>
+                              <div className={styles.radioGroup}>
+                                <label className={styles.radioLabel}>
+                                  <input
+                                    type="radio"
+                                    name={`brunchFarewell_${i}`}
+                                    value="yes"
+                                    required
+                                    checked={guestResponses[member]?.brunchFarewell === "yes"}
+                                    onChange={() => updateGuestResponse(member, "brunchFarewell", "yes")}
+                                  />{" "}
+                                  Yes
+                                </label>
+                                <label className={styles.radioLabel}>
+                                  <input
+                                    type="radio"
+                                    name={`brunchFarewell_${i}`}
+                                    value="no"
+                                    checked={guestResponses[member]?.brunchFarewell === "no"}
+                                    onChange={() => updateGuestResponse(member, "brunchFarewell", "no")}
+                                  />{" "}
+                                  No
+                                </label>
+                              </div>
+                            </div>
                           </>
                         )}
                       </div>
@@ -256,87 +377,16 @@ export default function RSVP() {
                 </div>
 
                 {anyoneAttending && (
-                  <>
-                    {inviteeData?.rehearsalDinner && (
-                      <div className={styles.formGroup}>
-                        <div className={styles.sectionHeader}>
-                          Rehearsal Dinner <span className={styles.inviteOnlyNote}>(Invite Only)</span>
-                        </div>
-                        <div className={styles.formQuestion}>
-                          <label>Will your party be attending the Rehearsal Dinner?</label>
-                          <div className={styles.radioGroup}>
-                            <label className={styles.radioLabel}>
-                              <input type="radio" name="rehearsalDinner" value="yes" required /> Yes
-                            </label>
-                            <label className={styles.radioLabel}>
-                              <input type="radio" name="rehearsalDinner" value="no" /> No
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    <div className={styles.formGroup}>
-                      <div className={styles.sectionHeader}>Welcome Party</div>
-                      <div className={styles.formQuestion}>
-                        <label>Will your party be attending the Welcome Party?</label>
-                        <div className={styles.radioGroup}>
-                          <label className={styles.radioLabel}>
-                            <input type="radio" name="welcomeParty" value="yes" required /> Yes
-                          </label>
-                          <label className={styles.radioLabel}>
-                            <input type="radio" name="welcomeParty" value="no" /> No
-                          </label>
-                        </div>
-                      </div>
+                  <div className={styles.formGroup}>
+                    <div className={styles.sectionHeader}>Wedding Day</div>
+                    <div className={`${styles.formQuestion} ${styles.checkboxQuestion}`}>
+                      <label className={styles.radioLabel}>
+                        <input type="checkbox" name="children" required />
+                        This is an adult only celebration (18+). I acknowledge
+                        and will arrange childcare if needed.
+                      </label>
                     </div>
-
-                    {inviteeData?.teaCeremony && (
-                      <div className={styles.formGroup}>
-                        <div className={styles.sectionHeader}>
-                          Tea Ceremony <span className={styles.inviteOnlyNote}>(Invite Only)</span>
-                        </div>
-                        <div className={styles.formQuestion}>
-                          <label>Will your party be attending the Tea Ceremony?</label>
-                          <div className={styles.radioGroup}>
-                            <label className={styles.radioLabel}>
-                              <input type="radio" name="teaCeremony" value="yes" required /> Yes
-                            </label>
-                            <label className={styles.radioLabel}>
-                              <input type="radio" name="teaCeremony" value="no" /> No
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    <div className={styles.formGroup}>
-                      <div className={styles.sectionHeader}>Wedding Day</div>
-
-                      <div className={`${styles.formQuestion} ${styles.checkboxQuestion}`}>
-                        <label className={styles.radioLabel}>
-                          <input type="checkbox" name="children" required />
-                          This is an adult only celebration (18+). I acknowledge
-                          and will arrange childcare if needed.
-                        </label>
-                      </div>
-                    </div>
-
-                    <div className={styles.formGroup}>
-                      <div className={styles.sectionHeader}>Farewell Splash</div>
-                      <div className={styles.formQuestion}>
-                        <label>Will your party be attending the Farewell Splash (includes brunch)?</label>
-                        <div className={styles.radioGroup}>
-                          <label className={styles.radioLabel}>
-                            <input type="radio" name="brunchFarewell" value="yes" required /> Yes
-                          </label>
-                          <label className={styles.radioLabel}>
-                            <input type="radio" name="brunchFarewell" value="no" /> No
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </>
+                  </div>
                 )}
 
                 {anyoneAttending && (

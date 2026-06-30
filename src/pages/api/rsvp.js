@@ -9,6 +9,9 @@ export default async function handler(req, res) {
     try {
       const data = req.body;
       
+      // Add a timestamp for better tracking and deduplication
+      data.timestamp = { seconds: Math.floor(Date.now() / 1000) };
+      
       // 1. Save to Firebase rsvps collection
       await addDoc(collection(db, "rsvps"), data);
 
@@ -82,11 +85,11 @@ export default async function handler(req, res) {
         };
 
         const attendingEventsList = [];
-        if (data.rehearsalDinner === "yes") attendingEventsList.push(eventInfo.rehearsal);
-        if (data.welcomeParty === "yes") attendingEventsList.push(eventInfo.welcome);
-        if (data.teaCeremony === "yes") attendingEventsList.push(eventInfo.tea);
+        if (attendees.some(g => g.rehearsalDinner === "yes")) attendingEventsList.push(eventInfo.rehearsal);
+        if (attendees.some(g => g.welcomeParty === "yes")) attendingEventsList.push(eventInfo.welcome);
+        if (attendees.some(g => g.teaCeremony === "yes")) attendingEventsList.push(eventInfo.tea);
         attendingEventsList.push(eventInfo.wedding); // Always included if attending
-        if (data.brunchFarewell === "yes") attendingEventsList.push(eventInfo.farewell);
+        if (attendees.some(g => g.brunchFarewell === "yes")) attendingEventsList.push(eventInfo.farewell);
 
         // Generate JSON-LD for Apple/Google event detection banner
         const jsonLd = attendingEventsList.map(event => ({
