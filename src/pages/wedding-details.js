@@ -9,8 +9,7 @@ export default function WeddingDetails() {
                 <header className={styles.pageHeader}>
                     <h1 className={styles.pageTitle}>Wedding Weekend</h1>
                     <p className={styles.pageSubheading}>
-                        A weekend of celebrations in San Jose with welcome drinks at Meso, 
-                        an intimate garden ceremony, and a farewell by the pool.
+                        A weekend of celebrations in San Jose with welcome drinks at The Pressroom, an intimate garden ceremony, and a farewell by the pool.
                     </p>
                 </header>
 
@@ -47,7 +46,7 @@ export default function WeddingDetails() {
                                 className={styles.locationIcon}
                             />
                             <span className={styles.weddingLocationText}>
-                                <a className={styles.restaurantLink} target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Meso+Modern+Mediterranean+San+Jose">Meso Modern Mediterranean</a>
+                                <a className={styles.restaurantLink} target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/The+Pressroom/@37.3348721,-121.8963328,17z/data=!3m1!4b1!4m6!3m5!1s0x808fcd000a6aae67:0xcafd7a6cbf1f6989!8m2!3d37.3348679!4d-121.8937525!16s%2Fg%2F11wqvd9sz6?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D">The Pressroom, San Jose (Bar Mercury)</a>
                             </span>
                         </div>
                         <div className={styles.attire}>Attire: Cocktail</div>
@@ -61,7 +60,7 @@ export default function WeddingDetails() {
                         <div className={styles.scheduleTitle}>Schedule</div>
                             <div className={styles.eventGrid}>
                             <div className={styles.eventRow}>
-                                <span className={styles.time}>8:00 PM</span>
+                                <span className={styles.time}>7:30 PM</span>
                                 <span className={styles.eventLabel}>Guest Arrival</span>
                             </div>
                         </div>
