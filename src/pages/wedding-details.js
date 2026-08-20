@@ -60,8 +60,11 @@ export default function WeddingDetails() {
                         <div className={styles.scheduleTitle}>Schedule</div>
                             <div className={styles.eventGrid}>
                             <div className={styles.eventRow}>
-                                <span className={styles.time}>7:30 PM</span>
-                                <span className={styles.eventLabel}>Guest Arrival</span>
+                                <span className={styles.time}>
+                                    7:30 PM –<br />
+                                    10:30 PM
+                                </span>
+                                <span className={styles.eventLabel}>Welcome Reception</span>
                             </div>
                         </div>
                     </div>
@@ -116,8 +119,17 @@ export default function WeddingDetails() {
                             </div>
 
                             <div className={styles.eventRow}>
-                                <span className={styles.time}>6:30 PM</span>
+                                <span className={styles.time}>
+                                    6:40 PM
+                                </span>
                                 <span className={styles.eventLabel}>Wedding Reception</span>
+                            </div>
+                            <div className={styles.eventRow}>
+                                <span className={styles.time}>
+                                    11:00 PM –<br />
+                                    1:00 AM
+                                </span>
+                                <span className={styles.eventLabel}>After Party</span>
                             </div>
                         </div>
                     </div>

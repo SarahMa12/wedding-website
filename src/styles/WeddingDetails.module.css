@@ -192,7 +192,7 @@
 .eventRow {
     display: grid;
     grid-template-columns: 90px 1fr;
-    align-items: center;
+    align-items: start;
     gap: 1rem;
 }
 
